@@ -19,10 +19,10 @@ import { ErrorComponent } from './controllers/errorController/error.component';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: 'asd', component: HomeComponent },
 /*       { path: 'tableMetaData', component: CompTabMetaDataComponent },
       { path: 'tableValues', component: CompTabValuesComponent }, */
-      { path: '**', component: ErrorComponent }
+      { path: '', component: ErrorComponent }
     ])
   ],
   providers: [],

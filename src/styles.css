@@ -2,3 +2,29 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
 
+.home-container .home-slider .home-slide .slide1 {
+  position: fixed;
+  min-width: 100%;
+  background-image: url(/src/assets/img/landing.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.home-container .home-slider .home-slide .slide2 {
+  background-image: url(../src/assets/img/landing.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home-container .home-slider .home-slide .slide3 {
+  background-image: url(/assets/img/landing.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home-container .home-slider .home-slide .slide4 {
+  background-image: url(/assets/img/landing.jpg);
+  background-size: cover;
+  background-position: center;
+}

@@ -17,7 +17,7 @@
   left: 0;
   width: 500%;
   height: 100%;
-  animation: home-slider-animate 10s linear infinite;
+  animation: home-slider-animate 20s linear infinite;
 }
 
 .home-container .home-slider .home-slide {
@@ -52,30 +52,6 @@
   color: #fff;
   font-size: 25px;
   transition: 0.5s;
-}
-
-.home-container .home-slider .home-slide .slide1 {
-  background-image: url('../../assets/img/Landing4.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.home-container .home-slider .home-slide .slide2 {
-  background-image: url('../../assets/img/Landing4.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.home-container .home-slider .home-slide .slide3 {
-  background-image: url('../../assets/img/Landing4.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-.home-container .home-slider .home-slide .slide4 {
-  background-image: url('../../assets/img/Landing4.jpg');
-  background-size: cover;
-  background-position: center;
 }
 
 @keyframes home-slider-animate {

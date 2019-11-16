@@ -22,14 +22,12 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/img",
-              "src/app/assets/img"
+              "assets"
             ],
             "styles": [
               "src/styles-default.css",
               "src/styles.css",
-              "src/assets/fonts/fonts-styles.css",
-              "src/app/assets/img"
+              "src/assets/fonts/fonts-styles.css"
             ],
             "scripts": []
           },

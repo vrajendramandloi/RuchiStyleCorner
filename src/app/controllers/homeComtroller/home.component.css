@@ -54,6 +54,13 @@
   transition: 0.5s;
 }
 
+.home-container .home-slider .home-slide img{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
 @keyframes home-slider-animate {
   0% {
     left: 0;

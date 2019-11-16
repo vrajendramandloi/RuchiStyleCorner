@@ -7,22 +7,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './controllers/homeComtroller/home.component';
 import { ErrorComponent } from './controllers/errorController/error.component';
+import { NavbarComponent } from './controllers/navbarController/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SplashComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path: 'asd', component: HomeComponent },
+      { path: '', component: HomeComponent },
 /*       { path: 'tableMetaData', component: CompTabMetaDataComponent },
       { path: 'tableValues', component: CompTabValuesComponent }, */
-      { path: '', component: ErrorComponent }
+      { path: '**', component: ErrorComponent }
     ])
   ],
   providers: [],

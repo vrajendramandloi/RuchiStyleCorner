@@ -111,7 +111,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .home-container .home-slider .home-slide .caption {
     bottom: 60px;
     left: 60px;

@@ -1,0 +1,73 @@
+.splash-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+.splash-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 130%;
+  padding-bottom: 4%;
+  color: #fff;
+  z-index: 10;
+  font-family: 'Roboto', sans-serif;
+}
+
+.splash-loader {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #2196f3;
+  border-radius: 50%;
+  box-shadow: 0 0 50px #000;
+  overflow: hidden;
+}
+
+.splash-loader:before {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 40%;
+  background: #111;
+  opacity: 0.8;
+  animation: animate-app-loader-before 12s linear infinite;
+}
+
+@keyframes animate-app-loader-before {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.splash-loader:after {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 40%;
+  background: #111;
+  opacity: 0.9;
+  animation: animate-app-loader-after 5s linear infinite;
+}
+
+@keyframes animate-app-loader-after {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -1,9 +1,132 @@
 .aboutme_body {
   display: flex;
+  margin: 0;
+  padding: 0;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #cce0ff;
+  background: #737573;
   font-family: 'Roboto', sans-serif;
+}
+
+.aboutme_container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 900px;
+  height: 500px;
+  background: #fff;
+  margin: 20px;
+}
+
+.aboutme_container .aboutme_imgbx
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.aboutme_container .aboutme_imgbx img {
+  position: relative;
+  width: 250px;
+  /* transform: rotate(-30deg); */
+}
+
+.aboutme_container .aboutme_details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+.aboutme_container .aboutme_details h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.5em;
+  line-height: 0.8em;
+  color: #444;
+}
+
+
+.aboutme_container .aboutme_details p {
+  max-width: 100%;
+  margin-top: 20px;
+  color: #333;
+  font-size: 15px;
+}
+
+.aboutme_container .aboutme_details h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.0em;
+  color: #000;
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.aboutme_container .aboutme_details .aboutme_socialmedia {
+  position: relative;
+  float: left;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.aboutme_container .aboutme_details .aboutme_socialmedia a i{
+  margin-right: 20px;
   font-size: 30px;
+  color: #747474;
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+
+  .aboutme_container {
+    height: auto;
+    width: 100% !important;
+    margin-top: 100px;
+  }
+
+  .aboutme_container .aboutme_imgbx {
+    padding: 40px;
+    box-sizing: border-box;
+    width: 100% !important;
+    height: auto;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .aboutme_container .aboutme_imgbx img {
+    max-width: 100%;
+  }
+
+  .aboutme_container .aboutme_details {
+    background: #e6e3e3;
+    width: 100% !important;
+    height: auto;
+    padding: 20px;
+  }
+
+  .aboutme_container .aboutme_details .aboutme_socialmedia {
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .aboutme_container .aboutme_details .aboutme_socialmedia a i{
+    margin-right: 30px;
+    font-size: 40px;
+  }
 }

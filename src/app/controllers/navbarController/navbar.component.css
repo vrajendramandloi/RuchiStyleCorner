@@ -9,6 +9,8 @@
   margin: 0 auto;
   display: flex;
   transition: 0.5s;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .navbar-toggle {

@@ -1,0 +1,9 @@
+.aboutme_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #cce0ff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+}

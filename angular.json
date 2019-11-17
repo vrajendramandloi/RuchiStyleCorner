@@ -28,7 +28,9 @@
               "src/styles.css",
               "src/assets/fonts/fonts-styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {

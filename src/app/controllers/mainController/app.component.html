@@ -1,5 +1,5 @@
 <div @fadeout *ngIf="loadingApp">
   <splash-loader></splash-loader>
 </div>
-<navbar-component class="navbar-main"></navbar-component>
+<navbar-component [hidden]="loadingApp" class="navbar-main"></navbar-component>
 <router-outlet></router-outlet>

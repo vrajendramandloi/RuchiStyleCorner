@@ -12,6 +12,18 @@ import { VlogsComponent } from './controllers/vlogsController/vlogs.component';
 import { BlogsComponent } from './controllers/blogsController/blogs.component';
 import { FashionLifestyleComponent } from './controllers/fashionLifestyleController/fashionlifestyle.component';
 import { AboutMeComponent } from './controllers/aboutmeController/aboutme.component';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule } from 'angularfire2';
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
+  authDomain: 'fbase-demo-vic1.firebaseapp.com',
+  databaseURL: 'https://fbase-demo-vic1.firebaseio.com',
+  projectId: 'fbase-demo-vic1',
+  storageBucket: 'fbase-demo-vic1.appspot.com',
+  messagingSenderId: '946519407971',
+  appId: '1:946519407971:web:c2f7306625b8ea98bea756'
+};
 
 @NgModule({
   declarations: [
@@ -28,6 +40,8 @@ import { AboutMeComponent } from './controllers/aboutmeController/aboutme.compon
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'vlogs', component: VlogsComponent },

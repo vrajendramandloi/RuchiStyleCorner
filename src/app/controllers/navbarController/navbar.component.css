@@ -87,7 +87,7 @@ ul li a:hover {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1024px) {
   .navbar-toggle {
     top: 55px;
     left: 40px;

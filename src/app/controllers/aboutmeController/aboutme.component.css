@@ -15,7 +15,7 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  background: #40e0d0;
+  background: #fff;
   margin: 1rem;
   margin-top: 6rem;
   border-radius: 0.8rem;
@@ -29,6 +29,8 @@
   padding: 2rem;
   position: relative;
   transition: .5s;
+  background: #40e0d0;
+  border-radius: 0.8rem;
 }
 
 .aboutme_container .aboutme_imgbx img{

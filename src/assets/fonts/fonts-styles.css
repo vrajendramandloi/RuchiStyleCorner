@@ -1,4 +1,9 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   src: url("Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Charmonman', cursive;
+  src: url("Charmonman-Bold.ttf") format("truetype");
 }

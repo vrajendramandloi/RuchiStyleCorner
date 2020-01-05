@@ -6,10 +6,11 @@
 
 .navbar-container {
   width: 100%;
+  padding-top: 1rem;
   height: 3rem;
   display: flex;
   background: rgb(89,89,89);
-background: linear-gradient(180deg, rgba(89,89,89,1) 0%, rgba(131,131,131,0.4990371148459384) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(180deg, rgba(89,89,89,1) 0%, rgba(131,131,131,0.4990371148459384) 50%, rgba(255,255,255,0) 100%);
   flex-direction: row;
   justify-content: center;
   align-items: center;

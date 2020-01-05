@@ -15,6 +15,9 @@ export class NavbarComponent implements OnInit {
       $('.navbar-menu ul li a').click(function() {
         $('.navbar-menu').toggleClass('active');
       });
+      $('.navbar-menu .navbar-close a').click(function() {
+        $('.navbar-menu').toggleClass('active');
+      });
     });
   }
 }

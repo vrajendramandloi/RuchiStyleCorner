@@ -68,13 +68,11 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .navbar-menu-container .navbar-close {
   position: absolute;
-  width: 100%;
-  height: 100%;
   left: 1rem;
   top: 1rem;
 }

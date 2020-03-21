@@ -5,7 +5,6 @@ import { AppComponent } from './controllers/mainController/app.component';
 import { SplashComponent } from './controllers/splashScreen/splash.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { HomeComponent } from './controllers/homeComtroller/home.component';
 import { ErrorComponent } from './controllers/errorController/error.component';
 import { NavbarComponent } from './controllers/navbarController/navbar.component';
 import { VlogsComponent } from './controllers/vlogsController/vlogs.component';
@@ -14,6 +13,7 @@ import { FashionLifestyleComponent } from './controllers/fashionLifestyleControl
 import { AboutMeComponent } from './controllers/aboutmeController/aboutme.component';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+import { HomeComponent } from './controllers/homeController/home.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',

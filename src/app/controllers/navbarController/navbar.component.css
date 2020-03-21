@@ -174,10 +174,53 @@ ul li a:hover {
   .navbar-container .navbar-logo img{
     width: 15rem;
   }
+
+  .navbar-details .navbar-menu-logo img{
+    width: 12rem;
+  }
+
+  .navbar-details .navbar-menu-list {
+    margin-top: 0.5rem;
+  }
+
+  ul li a {
+    padding: 5px;
+  }
+
+  .navbar-details .navbar-menu-socialmedia {
+    margin-top: 0.5rem;
+  }
+
+  .navbar-menu-socialmedia a i{
+    font-size: 25px;
+    margin: .5rem;
+  }
+
 }
 
 @media (min-width: 1024px) and (max-width: 1300px) and (orientation:landscape) {
   .navbar-container .navbar-logo img{
     width: 20rem;
+  }
+
+  .navbar-details .navbar-menu-logo img{
+    width: 18rem;
+  }
+
+  .navbar-details .navbar-menu-list {
+    margin-top: 1.5rem;
+  }
+
+  ul li a {
+    padding: 10px;
+  }
+
+  .navbar-details .navbar-menu-socialmedia {
+    margin-top: 1.5rem;
+  }
+
+  .navbar-menu-socialmedia a i{
+    font-size: 25px;
+    margin: .5rem;
   }
 }

@@ -9,8 +9,8 @@
   padding-top: 1rem;
   height: 3rem;
   display: flex;
-  background: rgb(89,89,89);
-  background: linear-gradient(180deg, rgba(89,89,89,1) 0%, rgba(131,131,131,0.4990371148459384) 50%, rgba(255,255,255,0) 100%);
+  background: rgb(232,238,255);
+  background: linear-gradient(180deg, rgba(232,238,255,1) 0%, rgba(192,199,223,0.5) 50%, rgba(255,255,255,0) 100%);
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -145,18 +145,39 @@ ul li a:hover {
   margin: .5rem;
 }
 
-@media (min-width: 768px) and (orientation:portrait) {
-
+@media (min-width: 768px) {
+  .navbar-container .navbar-toggle a {
+    font-size: 28px;
+  }
+  .navbar-container .navbar-logo img{
+    width: 20rem;
+  }
 }
 
-@media (min-width: 1000px) and (orientation:portrait) {
-
-}
-
-@media (min-width: 1224px) and (orientation:portrait) {
-
+@media (min-width: 1224px) {
+  .navbar-container {
+    height: 4rem;
+  }
+  .navbar-container .navbar-toggle a {
+    font-size: 35px;
+  }
+  .navbar-container .navbar-logo img{
+    width: 25rem;
+  }
 }
 
 @media all and (orientation:landscape) {
 
+}
+
+@media (max-width: 1024px) and (orientation:landscape) {
+  .navbar-container .navbar-logo img{
+    width: 15rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1300px) and (orientation:landscape) {
+  .navbar-container .navbar-logo img{
+    width: 20rem;
+  }
 }

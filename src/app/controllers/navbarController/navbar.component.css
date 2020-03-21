@@ -144,3 +144,19 @@ ul li a:hover {
   font-size: 35px;
   margin: .5rem;
 }
+
+@media (min-width: 768px) and (orientation:portrait) {
+
+}
+
+@media (min-width: 1000px) and (orientation:portrait) {
+
+}
+
+@media (min-width: 1224px) and (orientation:portrait) {
+
+}
+
+@media all and (orientation:landscape) {
+
+}

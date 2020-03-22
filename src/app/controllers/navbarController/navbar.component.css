@@ -9,8 +9,8 @@
   padding-top: 1rem;
   height: 3rem;
   display: flex;
-  background: rgb(232,238,255);
-  background: linear-gradient(180deg, rgba(232,238,255,1) 0%, rgba(192,199,223,0.5) 50%, rgba(255,255,255,0) 100%);
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@
   font-size: 23px;
   cursor: pointer;
   margin-top: 10px;
-  color: #fff;
+  color: #FFD933;
   border-radius: 2rem;
   padding-top:-10px;
   padding: 0px 3px;
@@ -195,7 +195,6 @@ ul li a:hover {
     font-size: 25px;
     margin: .5rem;
   }
-
 }
 
 @media (min-width: 1024px) and (max-width: 1300px) and (orientation:landscape) {

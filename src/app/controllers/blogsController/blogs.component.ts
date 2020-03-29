@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   templateUrl: './blogs.component.html',
   styleUrls: ['./blogs.component.css']
 })
-export class BlogsComponent {/* } implements OnInit{ */
+export class BlogsComponent {/* implements OnInit { */
   /* notesCollection: AngularFirestoreCollection<Note>;
   notes: Observable<Note[]>;
 

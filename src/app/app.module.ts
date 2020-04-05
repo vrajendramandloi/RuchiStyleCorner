@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './controllers/mainController/app.component';
 import { SplashComponent } from './controllers/splashScreen/splash.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,6 +13,16 @@ import { AboutMeComponent } from './controllers/aboutmeController/aboutme.compon
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { HomeComponent } from './controllers/homeController/home.component';
+import { AdminTempComponent } from './controllers/adminTemplate/adminTemp.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+/* import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core'; */
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { VideoLogsService } from './service/VideoLogs.service';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -35,10 +44,18 @@ export const firebaseConfig = {
     VlogsComponent,
     BlogsComponent,
     AboutMeComponent,
+    AdminTempComponent,
     FashionLifestyleComponent
   ],
   imports: [
     BrowserModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
@@ -48,10 +65,14 @@ export const firebaseConfig = {
       { path: 'blogs', component: BlogsComponent },
       { path: 'aboutme', component: AboutMeComponent },
       { path: 'fashionLifestyle', component: FashionLifestyleComponent },
+      { path: 'adminTemp', component: AdminTempComponent },
       { path: '**', component: ErrorComponent }
-    ])
+    ]),
+    FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    VideoLogsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

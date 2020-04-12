@@ -21,7 +21,9 @@ export class VlogsComponent implements OnInit {
   vlogsList: VideoLogs[] = [];
   prList: VideoLogs[] = [];
 
-  constructor(private videoLogService: VideoLogsService, public sanitizer: DomSanitizer) {
+  constructor(private videoLogService: VideoLogsService, public sanitizer: DomSanitizer) {  }
+
+  ngOnInit() {
     console.log('Fetching Entries from Firebase');
     this.videoLogList = this.videoLogService.fetchEntries();
     this.videoLogList.subscribe((videoItems) => {
@@ -54,6 +56,4 @@ export class VlogsComponent implements OnInit {
       }
     });
   }
-
-  ngOnInit() { }
 }

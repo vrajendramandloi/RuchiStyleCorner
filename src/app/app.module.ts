@@ -23,6 +23,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VideoLogsService } from './service/VideoLogs.service';
+import { AdminTempGridComponent } from './controllers/adminTemplateGrid/adminTempGrid.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -66,6 +67,7 @@ export const firebaseConfig = {
       { path: 'aboutme', component: AboutMeComponent },
       { path: 'fashionLifestyle', component: FashionLifestyleComponent },
       { path: 'adminTemp', component: AdminTempComponent },
+      { path: 'adminTempGrid', component: AdminTempGridComponent },
       { path: '**', component: ErrorComponent }
     ]),
     FontAwesomeModule

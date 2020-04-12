@@ -16,12 +16,44 @@ import { fadeoutTrigger } from 'src/app/utils/app-animations';
 export class VlogsComponent implements OnInit {
   loadingApp = true;
   videoLogList: Observable<VideoLogs[]>;
-  constructor(private videoLogService: VideoLogsService, public sanitizer: DomSanitizer) { }
+  homedecorList: VideoLogs[] = [];
+  lifestyleList: VideoLogs[] = [];
+  vlogsList: VideoLogs[] = [];
+  prList: VideoLogs[] = [];
 
-  ngOnInit() {
+  constructor(private videoLogService: VideoLogsService, public sanitizer: DomSanitizer) {
     console.log('Fetching Entries from Firebase');
     this.videoLogList = this.videoLogService.fetchEntries();
-    this.videoLogList.subscribe(() => this.loadingApp = false);
-    console.log(this.videoLogList);
+    this.videoLogList.subscribe((videoItems) => {
+      this.loadingApp = false;
+      console.log('Loaded Video List from Server');
+      if (videoItems != null && videoItems.length !== 0) {
+          videoItems.forEach(videoItem => {
+            switch (videoItem.videoGenere) {
+              case 'HOME_DECOR': {
+                this.homedecorList.push(videoItem);
+                break;
+              }
+              case 'VLOGS': {
+                this.vlogsList.push(videoItem);
+                break;
+              }
+              case 'PRODUCT_REVIEW': {
+                this.prList.push(videoItem);
+                break;
+              }
+              case 'LIFESTYLE': {
+                this.lifestyleList.push(videoItem);
+                break;
+              }
+              default: {
+                break;
+              }
+            }
+        });
+      }
+    });
   }
+
+  ngOnInit() { }
 }

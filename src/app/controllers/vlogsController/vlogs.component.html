@@ -4,10 +4,62 @@
 <div class="vlogs_body">
   <div class="vlogs_content">
     <div class="vlogs_header">
-      <h2>YouTube Videos</h2>
+      <h2>Home Decor</h2>
     </div>
+    <hr />
     <div class="vlogs_container">
-      <div class="vlogs_post" *ngFor="let videolog of videoLogList | async">
+      <div class="vlogs_post" *ngFor="let videolog of homedecorList ">
+        <div class="vlogs_video">
+          <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(videolog.youtubeLink)' frameborder="0"></iframe>
+        </div>
+        <div class="vlogs_description">
+          <h2>{{ videolog.videoTitle }}</h2>
+          <span>{{ videolog.uploadDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vlogs_content">
+    <div class="vlogs_header">
+      <h2>LifeStyle</h2>
+    </div>
+    <hr />
+    <div class="vlogs_container">
+      <div class="vlogs_post" *ngFor="let videolog of lifestyleList">
+        <div class="vlogs_video">
+          <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(videolog.youtubeLink)' frameborder="0"></iframe>
+        </div>
+        <div class="vlogs_description">
+          <h2>{{ videolog.videoTitle }}</h2>
+          <span>{{ videolog.uploadDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vlogs_content">
+    <div class="vlogs_header">
+      <h2>V-Logs</h2>
+    </div>
+    <hr />
+    <div class="vlogs_container">
+      <div class="vlogs_post" *ngFor="let videolog of vlogsList">
+        <div class="vlogs_video">
+          <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(videolog.youtubeLink)' frameborder="0"></iframe>
+        </div>
+        <div class="vlogs_description">
+          <h2>{{ videolog.videoTitle }}</h2>
+          <span>{{ videolog.uploadDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vlogs_content">
+    <div class="vlogs_header">
+      <h2>Product Review</h2>
+    </div>
+    <hr />
+    <div class="vlogs_container">
+      <div class="vlogs_post" *ngFor="let videolog of prList">
         <div class="vlogs_video">
           <iframe [src]='sanitizer.bypassSecurityTrustResourceUrl(videolog.youtubeLink)' frameborder="0"></iframe>
         </div>

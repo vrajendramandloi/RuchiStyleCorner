@@ -5,8 +5,15 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #fff;
   font-family: 'Roboto', sans-serif;
+  /* Eternal Constance blue - Green */
+  background: rgb(22,148,182);
+  background: linear-gradient(180deg, rgba(22,148,182,1) 0%, rgba(46,79,132,1) 100%);
+  /* Background color blue to light blue */
+  /* background: rgb(69,115,177);
+  background: linear-gradient(180deg, rgba(69,115,177,1) 0%, rgba(30,60,114,1) 100%); */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .aboutme_container {

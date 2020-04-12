@@ -9,8 +9,8 @@
   padding-top: 1rem;
   height: 3rem;
   display: flex;
-  background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+  /* background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%); */
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@
   font-size: 23px;
   cursor: pointer;
   margin-top: 10px;
-  color: #595959;
+  color: #fff;
   border-radius: 2rem;
   padding-top:-10px;
   padding: 0px 3px;

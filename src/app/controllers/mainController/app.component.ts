@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { fadeoutTrigger } from 'src/app/utils/app-animations';
-import {
-  Router, NavigationCancel,
-  NavigationEnd, NavigationError,
-  NavigationStart, Event
-} from '@angular/router';
 
 @Component({
   selector: 'app-root',

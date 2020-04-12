@@ -4,7 +4,13 @@
   align-content: center;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
+/* Eternal Constance blue - Green */
+background: rgb(22,148,182);
+background: linear-gradient(180deg, rgba(22,148,182,1) 0%, rgba(46,79,132,1) 100%);
+
+/* Eternal Constance blue - LightBlue */
+/* background: rgb(83,120,149);
+background: linear-gradient(180deg, rgba(83,120,149,1) 0%, rgba(9,32,63,1) 100%); */
 }
 
 .blog_container {

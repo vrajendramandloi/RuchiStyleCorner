@@ -4,7 +4,11 @@
   align-content: center;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
-  background-color: #F1F1F1;
+  /* Eternal Constance blue - Green */
+  background: rgb(22,148,182);
+  background: linear-gradient(180deg, rgba(22,148,182,1) 0%, rgba(46,79,132,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .vlogs_content {
@@ -25,11 +29,11 @@
 .vlogs_content .vlogs_header h2{
   border-radius: 0.5rem;
   padding: 2px 10px;
-  background-color: #4169E1;
+  background-color: #fff;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 20px;
-  color: #fff;
+  color: #4169E1;
 }
 
 .vlogs_content .vlogs_container {
@@ -78,6 +82,8 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  margin-top: 10px;
+  color: #fff;
 }
 
 .vlogs_post .vlogs_description span{

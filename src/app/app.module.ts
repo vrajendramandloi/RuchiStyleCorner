@@ -8,7 +8,6 @@ import { ErrorComponent } from './controllers/errorController/error.component';
 import { NavbarComponent } from './controllers/navbarController/navbar.component';
 import { VlogsComponent } from './controllers/vlogsController/vlogs.component';
 import { BlogsComponent } from './controllers/blogsController/blogs.component';
-import { FashionLifestyleComponent } from './controllers/fashionLifestyleController/fashionlifestyle.component';
 import { AboutMeComponent } from './controllers/aboutmeController/aboutme.component';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
@@ -23,7 +22,7 @@ import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VideoLogsService } from './service/VideoLogs.service';
-import { AdminTempGridComponent } from './controllers/adminTemplateGrid/adminTempGrid.component';
+import { ProductsComponent } from './controllers/productsController/products.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -46,7 +45,7 @@ export const firebaseConfig = {
     BlogsComponent,
     AboutMeComponent,
     AdminTempComponent,
-    FashionLifestyleComponent
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -65,9 +64,8 @@ export const firebaseConfig = {
       { path: 'vlogs', component: VlogsComponent },
       { path: 'blogs', component: BlogsComponent },
       { path: 'aboutme', component: AboutMeComponent },
-      { path: 'fashionLifestyle', component: FashionLifestyleComponent },
+      { path: 'products', component: ProductsComponent },
       { path: 'adminTemp', component: AdminTempComponent },
-      { path: 'adminTempGrid', component: AdminTempGridComponent },
       { path: '**', component: ErrorComponent }
     ]),
     FontAwesomeModule

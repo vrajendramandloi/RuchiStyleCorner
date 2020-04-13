@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
-  selector: 'fashionlifestyle-control',
-  templateUrl: './fashionlifestyle.component.html',
-  styleUrls: ['./fashionlifestyle.component.css']
+  selector: 'app-products-control',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css']
 })
-export class FashionLifestyleComponent implements OnInit {
+export class ProductsComponent implements OnInit {
   titleNote: string;
   constructor(private afs: AngularFirestore) {}
   ngOnInit() {

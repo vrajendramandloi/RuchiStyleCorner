@@ -2,9 +2,9 @@ import { Timestamp } from 'rxjs';
 import { firestore } from 'firebase';
 
 export interface VideoLogs {
-  videoIndex: number;
-  videoTitle: string;
-  youtubeLink: string;
-  videoGenere: string;
-  uploadDateTime: firestore.Timestamp;
+  vlogIndex: number;
+  vlogTitle: string;
+  vlogLink: string;
+  vlogGenere: string;
+  vlogDateTime: firestore.Timestamp;
 }

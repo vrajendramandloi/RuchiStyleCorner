@@ -23,6 +23,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VideoLogsService } from './service/VideoLogs.service';
 import { ProductsComponent } from './controllers/productsController/products.component';
+import { BLogsService } from './service/BLogs.service';
+import { ProductsService } from './service/Products.service';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -71,7 +73,9 @@ export const firebaseConfig = {
     FontAwesomeModule
   ],
   providers: [
-    VideoLogsService
+    VideoLogsService,
+    BLogsService,
+    ProductsService
   ],
   bootstrap: [AppComponent]
 })

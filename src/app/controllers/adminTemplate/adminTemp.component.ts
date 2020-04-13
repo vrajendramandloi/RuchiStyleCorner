@@ -4,6 +4,8 @@ import { VideoLogsService } from 'src/app/service/VideoLogs.service';
 import { VideoLogs } from 'src/app/utils/videoLogs';
 import { Products } from 'src/app/utils/products';
 import { Blogs } from 'src/app/utils/blogs';
+import { ProductsService } from 'src/app/service/Products.service';
+import { BLogsService } from 'src/app/service/BLogs.service';
 
 @Component({
   selector: 'app-adminTemplate',
@@ -11,7 +13,7 @@ import { Blogs } from 'src/app/utils/blogs';
   styleUrls: ['./adminTemp.component.css']
 })
 export class AdminTempComponent {
-  constructor(private videoLogService: VideoLogsService) { }
+  constructor(private videoLogService: VideoLogsService, private productsService: ProductsService, private blogsService: BLogsService) { }
 
   /* Vlog Details input */
   vlogsFormGroup = new FormGroup({
@@ -97,7 +99,7 @@ export class AdminTempComponent {
         productDateTime: this.fc_productDateTime.value
       };
       console.log('Calling Service to persist Object {}', product);
-      this.videoLogService.createEntry(product);
+      this.productsService.createEntry(product);
     }
   }
 
@@ -123,7 +125,7 @@ export class AdminTempComponent {
         blogText: this.fc_blogText.value,
       };
       console.log('Calling Service to persist Object {}', blog);
-      this.videoLogService.createEntry(blog);
+      this.blogsService.createEntry(blog);
     }
   }
 }

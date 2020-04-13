@@ -31,7 +31,7 @@ export class VlogsComponent implements OnInit {
       console.log('Loaded Video List from Server');
       if (videoItems != null && videoItems.length !== 0) {
           videoItems.forEach(videoItem => {
-            switch (videoItem.videoGenere) {
+            switch (videoItem.vlogGenere) {
               case 'HOME_DECOR': {
                 this.homedecorList.push(videoItem);
                 break;

@@ -1,118 +1,116 @@
 <div class="adminTemp_body">
-  <div class="adminTemp_container">
-    <!-- Vlogs Console -->
-    <div class="adminTemp_vlogsConsole">
-      <div class="adminTemp_vlogInfoInputHeader">
-        <h2>Video-Logs Information Input</h2>
-      </div>
-      <div class="adminTemp_vlogInfoInput">
-        <form [formGroup]="vlogsFormGroup" (ngSubmit)="createNewVlogEntry()">
-          <mat-form-field class="matfieldString">
-            <input matInput placeholder="Title" formControlName="videoTitle" />
-            <mat-error *ngIf="videoTitle.hasError('required')"> Video Title Required </mat-error>
-          </mat-form-field>
-          <mat-form-field class="matfieldString">
-            <input matInput placeholder="Enter youtube URL" formControlName="youtubeUrl" />
-            <mat-error *ngIf="youtubeUrl.hasError('required')"> Url Required </mat-error>
-          </mat-form-field>
-          <mat-form-field class="matfieldString">
-            <mat-label>Choose one</mat-label>
-            <mat-select formControlName="videoGenere">
-              <mat-option value="HOME_DECOR">HOMEDECOR</mat-option>
-              <mat-option value="VLOGS">VLOGS</mat-option>
-              <mat-option value="PRODUCT_REVIEW">PRODUCT REVIEW</mat-option>
-              <mat-option value="LIFESTYLE">LIFESTYLE</mat-option>
-              <mat-option value="HEALTHY_LIVING">HEALTHY LIVING</mat-option>
-            </mat-select>
-            <mat-error *ngIf="videoGenere.hasError('required')">Video Genere/ Type Required</mat-error>
-          </mat-form-field>
-          <div class="matfieldString">
-            <div class="input-wrapper">
-              <label>Date Time(via reactive form):</label>
-              <input [formControl]="videoUploadDateTime" [owlDateTimeTrigger]="dtPicker2"
-              [owlDateTime]="dtPicker2">
-              <owl-date-time #dtPicker2></owl-date-time>
+    <div class="adminTemp_container">
+      <!-- Vlogs Console -->
+      <div class="adminTemp_Card">
+        <div class="adminTemp_Header">
+          <h2>Video-Logs Information Input</h2>
+        </div>
+        <div class="adminTemp_Input">
+          <form [formGroup]="vlogsFormGroup" (ngSubmit)="createNewVlogEntry()">
+            <mat-form-field class="matfieldString">
+              <input matInput placeholder="Title" formControlName="fc_vlogTitle" />
+              <mat-error *ngIf="fc_vlogTitle.hasError('required')"> Video Title Required </mat-error>
+            </mat-form-field>
+            <mat-form-field class="matfieldString">
+              <input matInput placeholder="Enter youtube URL" formControlName="fc_vlogLink" />
+              <mat-error *ngIf="fc_vlogLink.hasError('required')"> Url Required </mat-error>
+            </mat-form-field>
+            <mat-form-field class="matfieldString">
+              <mat-label>Choose one</mat-label>
+              <mat-select formControlName="fc_vlogGenere">
+                <mat-option value="HOME_DECOR">HOMEDECOR</mat-option>
+                <mat-option value="VLOGS">VLOGS</mat-option>
+                <mat-option value="PRODUCT_REVIEW">PRODUCT REVIEW</mat-option>
+                <mat-option value="LIFESTYLE">LIFESTYLE</mat-option>
+                <mat-option value="HEALTHY_LIVING">HEALTHY LIVING</mat-option>
+              </mat-select>
+              <mat-error *ngIf="fc_vlogGenere.hasError('required')">Video Genere/ Type Required</mat-error>
+            </mat-form-field>
+            <div class="matfieldString">
+              <div class="input-wrapper">
+                <label>Date Time(via reactive form):</label>
+                <input [formControl]="fc_vlogDateTime" [owlDateTimeTrigger]="dtPicker2"
+                [owlDateTime]="dtPicker2">
+                <owl-date-time #dtPicker2></owl-date-time>
+              </div>
             </div>
-          </div>
-          <input type="submit" class="btn btn-primary" style="margin: 1rem;" />
-        </form>
+            <input type="submit" class="btn btn-primary" style="margin: 1rem;" />
+          </form>
+        </div>
       </div>
-    </div>
-    <!-- Blogs Console -->
-    <div class="adminTemp_vlogsConsole">
-      <div class="adminTemp_vlogInfoInputHeader">
-        <h2>Video-Logs Information Input</h2>
-      </div>
-      <div class="adminTemp_vlogInfoInput">
-        <form [formGroup]="vlogsFormGroup" (ngSubmit)="createNewVlogEntry()">
-          <mat-form-field class="matfieldString">
-            <input matInput placeholder="Title" formControlName="videoTitle" />
-            <mat-error *ngIf="videoTitle.hasError('required')"> Video Title Required </mat-error>
-          </mat-form-field>
-          <mat-form-field class="matfieldString">
-            <input matInput placeholder="Enter youtube URL" formControlName="youtubeUrl" />
-            <mat-error *ngIf="youtubeUrl.hasError('required')"> Url Required </mat-error>
-          </mat-form-field>
-          <mat-form-field class="matfieldString">
-            <mat-label>Choose one</mat-label>
-            <mat-select formControlName="videoGenere">
-              <mat-option value="HOME_DECOR">HOMEDECOR</mat-option>
-              <mat-option value="VLOGS">VLOGS</mat-option>
-              <mat-option value="PRODUCT_REVIEW">PRODUCT REVIEW</mat-option>
-              <mat-option value="LIFESTYLE">LIFESTYLE</mat-option>
-              <mat-option value="HEALTHY_LIVING">HEALTHY LIVING</mat-option>
-            </mat-select>
-            <mat-error *ngIf="videoGenere.hasError('required')">Video Genere/ Type Required</mat-error>
-          </mat-form-field>
-          <div class="matfieldString">
-            <div class="input-wrapper">
-              <label>Date Time(via reactive form):</label>
-              <input [formControl]="videoUploadDateTime" [owlDateTimeTrigger]="dtPicker2"
-              [owlDateTime]="dtPicker2">
-              <owl-date-time #dtPicker2></owl-date-time>
+      <!-- Products Console -->
+      <div class="adminTemp_Card">
+        <div class="adminTemp_Header">
+          <h2>Products Information Input</h2>
+        </div>
+        <div class="adminTemp_Input">
+          <form [formGroup]="productsFormGroup" (ngSubmit)="createNewProductEntry()">
+            <mat-form-field class="matfieldString">
+              <input matInput placeholder="Product Image url" formControlName="fc_productImg" />
+              <mat-error *ngIf="fc_productImg.hasError('required')"> Product Image Required </mat-error>
+            </mat-form-field>
+        <mat-form-field class="matfieldString">
+              <input matInput placeholder="Product Name" formControlName="fc_productName" />
+              <mat-error *ngIf="fc_productName.hasError('required')"> Product Name Required </mat-error>
+            </mat-form-field>
+            <mat-form-field class="matfieldString">
+              <input matInput placeholder="Product Description" formControlName="fc_productDesc" />
+              <mat-error *ngIf="fc_productDesc.hasError('required')"> Product Description Required </mat-error>
+            </mat-form-field>
+        <mat-form-field class="matfieldString">
+              <input matInput placeholder="Product price" formControlName="fc_productPrice" />
+              <mat-error *ngIf="fc_productPrice.hasError('required')"> Product Price Required </mat-error>
+            </mat-form-field>
+        <mat-form-field class="matfieldString">
+              <input matInput placeholder="Product Remaining Quantity" formControlName="fc_productRemainingQty" />
+              <mat-error *ngIf="fc_productRemainingQty.hasError('required')"> Remaining Quantity Required </mat-error>
+            </mat-form-field>
+        <mat-form-field class="matfieldString">
+              <input matInput placeholder="Product Total Quantity" formControlName="fc_productTotalQty" />
+              <mat-error *ngIf="fc_productTotalQty.hasError('required')"> Total Quantity Required </mat-error>
+            </mat-form-field>
+            <div class="matfieldString">
+              <div class="input-wrapper">
+                <label>Product Date Time:</label>
+                <input [formControl]="fc_productDateTime" [owlDateTimeTrigger]="dtPicker2"
+                [owlDateTime]="dtPicker2">
+                <owl-date-time #dtPicker2></owl-date-time>
+              </div>
             </div>
-          </div>
-          <input type="submit" class="btn btn-primary" style="margin: 1rem;" />
-        </form>
+            <input type="submit" class="btn btn-primary" style="margin: 1rem;" />
+          </form>
+        </div>
       </div>
-    </div>
-    <!-- Products Console -->
-    <div class="adminTemp_vlogsConsole">
-      <div class="adminTemp_vlogInfoInputHeader">
-        <h2>Video-Logs Information Input</h2>
-      </div>
-      <div class="adminTemp_vlogInfoInput">
-        <form [formGroup]="vlogsFormGroup" (ngSubmit)="createNewVlogEntry()">
-          <mat-form-field class="matfieldString">
-            <input matInput placeholder="Title" formControlName="videoTitle" />
-            <mat-error *ngIf="videoTitle.hasError('required')"> Video Title Required </mat-error>
-          </mat-form-field>
-          <mat-form-field class="matfieldString">
-            <input matInput placeholder="Enter youtube URL" formControlName="youtubeUrl" />
-            <mat-error *ngIf="youtubeUrl.hasError('required')"> Url Required </mat-error>
-          </mat-form-field>
-          <mat-form-field class="matfieldString">
-            <mat-label>Choose one</mat-label>
-            <mat-select formControlName="videoGenere">
-              <mat-option value="HOME_DECOR">HOMEDECOR</mat-option>
-              <mat-option value="VLOGS">VLOGS</mat-option>
-              <mat-option value="PRODUCT_REVIEW">PRODUCT REVIEW</mat-option>
-              <mat-option value="LIFESTYLE">LIFESTYLE</mat-option>
-              <mat-option value="HEALTHY_LIVING">HEALTHY LIVING</mat-option>
-            </mat-select>
-            <mat-error *ngIf="videoGenere.hasError('required')">Video Genere/ Type Required</mat-error>
-          </mat-form-field>
-          <div class="matfieldString">
-            <div class="input-wrapper">
-              <label>Date Time(via reactive form):</label>
-              <input [formControl]="videoUploadDateTime" [owlDateTimeTrigger]="dtPicker2"
-              [owlDateTime]="dtPicker2">
-              <owl-date-time #dtPicker2></owl-date-time>
+      <!-- Blogs Console -->
+      <div class="adminTemp_Card">
+        <div class="adminTemp_Header">
+          <h2>Blogs Input</h2>
+        </div>
+        <div class="adminTemp_Input">
+          <form [formGroup]="blogsFormGroup" (ngSubmit)="createNewBlogEntry()">
+            <mat-form-field class="matfieldString">
+              <input matInput placeholder="Blog Author Name" formControlName="fc_blogAuthor" />
+              <mat-error *ngIf="fc_blogAuthor.hasError('required')"> Author Name Required </mat-error>
+            </mat-form-field>
+            <mat-form-field class="matfieldString">
+              <input matInput placeholder="Enter youtube URL" formControlName="fc_blogThumbnail" />
+              <mat-error *ngIf="fc_blogThumbnail.hasError('required')"> Blog Thumbnail Required </mat-error>
+            </mat-form-field>
+            <mat-form-field class="matfieldString">
+              <input matInput placeholder="Enter youtube URL" formControlName="fc_blogText" />
+              <mat-error *ngIf="fc_blogText.hasError('required')"> blog Text Required </mat-error>
+            </mat-form-field>
+            <div class="matfieldString">
+              <div class="input-wrapper">
+                <label>Blog Date Time:</label>
+                <input [formControl]="fc_blogDateTime" [owlDateTimeTrigger]="dtPicker2"
+                [owlDateTime]="dtPicker2">
+                <owl-date-time #dtPicker2></owl-date-time>
+              </div>
             </div>
-          </div>
-          <input type="submit" class="btn btn-primary" style="margin: 1rem;" />
-        </form>
+            <input type="submit" class="btn btn-primary" style="margin: 1rem;" />
+          </form>
+        </div>
       </div>
     </div>
   </div>
-</div>

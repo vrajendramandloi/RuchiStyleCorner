@@ -1,20 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
+import { TestService } from 'src/app/service/Test.service';
+import { Blogs } from 'src/app/utils/blogs';
 
 @Component({
   selector: 'blogs-control',
   templateUrl: './blogs.component.html',
   styleUrls: ['./blogs.component.css']
 })
-export class BlogsComponent {/* implements OnInit { */
-  /* notesCollection: AngularFirestoreCollection<Note>;
-  notes: Observable<Note[]>;
+export class BlogsComponent implements OnInit {
+  loadingApp = true;
+  blogsList: Blogs[] = [];
 
-  constructor(private afs: AngularFirestore) {}
+  constructor(private testService: TestService, public sanitizer: DomSanitizer) {
+    console.log('blogs Component called');
+  }
 
   ngOnInit() {
-    this.notesCollection = this.afs.collection('notes');
-    this.notes = this.notesCollection.valueChanges();
-  } */
+    console.log('Fetching Entries from blogs Service');
+    /* this.blogsList = this.testService.getBlogs();
+    console.log(this.blogsList); */
+  }
 }

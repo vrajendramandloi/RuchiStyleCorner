@@ -34,6 +34,7 @@ export class AdminTempComponent {
   });
 
   blogsFormGroup = new FormGroup({
+    fc_blogTitle: new FormControl('', Validators.required),
     fc_blogAuthor: new FormControl('', Validators.required),
     fc_blogDateTime: new FormControl(new Date(), Validators.required),
     fc_blogThumbnail: new FormControl('', Validators.required),
@@ -104,6 +105,9 @@ export class AdminTempComponent {
   }
 
   /* Blogs Input Details */
+  get fc_blogTitle() {
+    return this.blogsFormGroup.get('fc_blogTitle');
+  }
   get fc_blogAuthor() {
     return this.blogsFormGroup.get('fc_blogAuthor');
   }
@@ -119,6 +123,7 @@ export class AdminTempComponent {
   createNewBlogEntry() {
     if (this.blogsFormGroup.valid) {
       const blog: Blogs = {
+        blogTitle: this.fc_blogTitle.value,
         blogAuthor: this.fc_blogAuthor.value,
         blogDateTime: this.fc_blogDateTime.value,
         blogThumbnail: this.fc_blogThumbnail.value,

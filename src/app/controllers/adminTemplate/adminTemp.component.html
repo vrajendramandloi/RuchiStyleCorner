@@ -89,6 +89,10 @@
         <div class="adminTemp_Input">
           <form [formGroup]="blogsFormGroup" (ngSubmit)="createNewBlogEntry()">
             <mat-form-field class="matfieldString">
+              <input matInput placeholder="Blog Title" formControlName="fc_blogTitle" />
+              <mat-error *ngIf="fc_blogAuthor.hasError('required')"> Blog Title Required </mat-error>
+            </mat-form-field>
+            <mat-form-field class="matfieldString">
               <input matInput placeholder="Blog Author Name" formControlName="fc_blogAuthor" />
               <mat-error *ngIf="fc_blogAuthor.hasError('required')"> Author Name Required </mat-error>
             </mat-form-field>

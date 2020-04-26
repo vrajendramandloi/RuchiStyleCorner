@@ -4,11 +4,13 @@ import { reject } from 'q';
 import { VideoLogs } from '../utils/videoLogs';
 import { Observable } from 'rxjs';
 import { Blogs } from '../utils/blogs';
+import { TestService } from './Test.service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
  })
-export class BLogsService  {
+export class BLogsService {
   private itemCollection: AngularFirestoreCollection<Blogs>;
   constructor();
   constructor(private afs?: AngularFirestore) {

@@ -16,6 +16,7 @@ import { AdminTempComponent } from './controllers/adminTemplate/adminTemp.compon
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
 /* import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core'; */
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
@@ -25,6 +26,8 @@ import { VideoLogsService } from './service/VideoLogs.service';
 import { ProductsComponent } from './controllers/productsController/products.component';
 import { BLogsService } from './service/BLogs.service';
 import { ProductsService } from './service/Products.service';
+import { TestService } from './service/Test.service';
+import { HttpClientModule } from '@angular/common/http';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -51,8 +54,10 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     MatSelectModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
@@ -75,7 +80,8 @@ export const firebaseConfig = {
   providers: [
     VideoLogsService,
     BLogsService,
-    ProductsService
+    ProductsService,
+    TestService
   ],
   bootstrap: [AppComponent]
 })

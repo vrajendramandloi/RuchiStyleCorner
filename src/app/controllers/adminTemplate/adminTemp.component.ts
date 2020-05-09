@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { VideoLogsService } from 'src/app/service/VideoLogs.service';
 import { VideoLogs } from 'src/app/utils/videoLogs';
 import { Products } from 'src/app/utils/products';
-import { Blogs } from 'src/app/utils/blogs';
+import { Blogs } from 'src/app/modal/blogs';
 import { ProductsService } from 'src/app/service/Products.service';
 import { BLogsService } from 'src/app/service/BLogs.service';
 
@@ -38,7 +38,9 @@ export class AdminTempComponent {
     fc_blogAuthor: new FormControl('', Validators.required),
     fc_blogDateTime: new FormControl(new Date(), Validators.required),
     fc_blogThumbnail: new FormControl('', Validators.required),
-    fc_blogText: new FormControl('', Validators.required)
+    fc_blogText: new FormControl('', Validators.required),
+    fc_blogLikes: new FormControl('', Validators.required),
+    fc_blogDislikes: new FormControl('', Validators.required)
   });
   /* Vlogs Input Details */
   get fc_vlogTitle() {
@@ -120,17 +122,26 @@ export class AdminTempComponent {
   get fc_blogText() {
     return this.blogsFormGroup.get('fc_blogText');
   }
+  get fc_blogLikes() {
+    return this.blogsFormGroup.get('fc_blogLikes');
+  }
+  get fc_blogDislikes() {
+    return this.blogsFormGroup.get('fc_blogDislikes');
+  }
   createNewBlogEntry() {
     if (this.blogsFormGroup.valid) {
-      const blog: Blogs = {
-        blogTitle: this.fc_blogTitle.value,
+      const newBlogTitle: string = this.fc_blogTitle.value;
+      const newBlog: Blogs = {
+        blogTitle: newBlogTitle,
         blogAuthor: this.fc_blogAuthor.value,
         blogDateTime: this.fc_blogDateTime.value,
         blogThumbnail: this.fc_blogThumbnail.value,
         blogText: this.fc_blogText.value,
+        blogLikes: this.fc_blogLikes.value,
+        blogDislikes: this.fc_blogDislikes.value
       };
-      console.log('Calling Service to persist Object {}', blog);
-      this.blogsService.createEntry(blog);
+      console.log('Calling Service to persist Object {}', newBlog);
+      this.blogsService.createNewBlogEntry(newBlog);
     }
   }
 }

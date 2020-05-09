@@ -97,13 +97,23 @@
               <mat-error *ngIf="fc_blogAuthor.hasError('required')"> Author Name Required </mat-error>
             </mat-form-field>
             <mat-form-field class="matfieldString">
-              <input matInput placeholder="Enter youtube URL" formControlName="fc_blogThumbnail" />
+              <input matInput placeholder="Blog Thumbnail" formControlName="fc_blogThumbnail" />
               <mat-error *ngIf="fc_blogThumbnail.hasError('required')"> Blog Thumbnail Required </mat-error>
             </mat-form-field>
-            <mat-form-field class="matfieldString">
-              <input matInput placeholder="Enter youtube URL" formControlName="fc_blogText" />
+            <mat-form-field class="mattextAreaString">
+              <textarea matInput rows="10" placeholder="Blog Text" formControlName="fc_blogText"></textarea>
               <mat-error *ngIf="fc_blogText.hasError('required')"> blog Text Required </mat-error>
             </mat-form-field>
+            <div class="admin_CounterInputs">
+              <mat-form-field class="matfieldSmallString">
+                <input matInput placeholder="Likes Count" formControlName="fc_blogLikes" />
+                <mat-error *ngIf="fc_blogLikes.hasError('required')"> blog Likes Required </mat-error>
+              </mat-form-field>
+              <mat-form-field class="matfieldSmallString">
+                <input matInput placeholder="Dislikes Count" formControlName="fc_blogDislikes" />
+                <mat-error *ngIf="fc_blogDislikes.hasError('required')"> blog Dislike Required </mat-error>
+              </mat-form-field>
+            </div>
             <div class="matfieldString">
               <div class="input-wrapper">
                 <label>Blog Date Time:</label>

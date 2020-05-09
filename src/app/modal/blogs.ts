@@ -1,4 +1,3 @@
-import { Timestamp } from 'rxjs';
 import { firestore } from 'firebase';
 
 export interface Blogs {
@@ -7,4 +6,6 @@ export interface Blogs {
   blogDateTime: firestore.Timestamp;
   blogThumbnail: string;
   blogText: string;
+  blogLikes: number;
+  blogDislikes: number;
 }

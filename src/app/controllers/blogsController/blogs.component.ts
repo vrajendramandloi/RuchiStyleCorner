@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Observable } from 'rxjs';
 import { TestService } from 'src/app/service/Test.service';
-import { Blogs } from 'src/app/utils/blogs';
+import { Blogs } from 'src/app/modal/blogs';
 
 @Component({
   selector: 'blogs-control',

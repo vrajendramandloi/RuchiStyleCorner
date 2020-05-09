@@ -28,6 +28,7 @@ import { BLogsService } from './service/BLogs.service';
 import { ProductsService } from './service/Products.service';
 import { TestService } from './service/Test.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BlogPageComponent } from './controllers/blogPageController/blogPage.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -48,6 +49,7 @@ export const firebaseConfig = {
     NavbarComponent,
     VlogsComponent,
     BlogsComponent,
+    BlogPageComponent,
     AboutMeComponent,
     AdminTempComponent,
     ProductsComponent
@@ -70,6 +72,7 @@ export const firebaseConfig = {
       { path: '', component: HomeComponent },
       { path: 'vlogs', component: VlogsComponent },
       { path: 'blogs', component: BlogsComponent },
+      { path: 'blog/:blogid', component: BlogPageComponent },
       { path: 'aboutme', component: AboutMeComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'adminTemp', component: AdminTempComponent },

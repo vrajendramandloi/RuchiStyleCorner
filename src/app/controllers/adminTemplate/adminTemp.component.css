@@ -48,3 +48,19 @@
   width: 100%;
   margin: 0 1rem;
 }
+
+.mattextAreaString {
+  width: 100%;
+  margin: 0 1rem;
+}
+
+.admin_CounterInputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.matfieldSmallString {
+  margin: 0 1rem;
+}

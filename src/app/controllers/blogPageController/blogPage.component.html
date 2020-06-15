@@ -17,7 +17,7 @@
           </div>
           <div class="vl"></div>
           <div class="outer-div">
-            <mat-icon>thumb_down</mat-icon>
+            <mat-icon>visibility</mat-icon>
             <span>200</span>
           </div>
           <div class="vl"></div>
@@ -26,9 +26,9 @@
             <span>Share</span>
           </div>
           <div class="vl"></div>
-          <div class="outer-div">
+          <div class="outer-div" (click)="loadComments(blogPage_Comments)">
             <mat-icon>message</mat-icon>
-            <span>Message</span>
+            <span>Comments</span>
           </div>
         </div>
         <p class="blogPage_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -67,7 +67,7 @@
           Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
           PageMaker including versions of Lorem Ipsum.</p>
       </div>
-      <div class="blogPage_Comments">
+      <div class="blogPage_Comments" id="blogPage_Comments">
         <span style="font-weight: bold;">Comments:</span>
         <div class="blogPage_inputComment">
           <mat-form-field appearance="outline" color="black">

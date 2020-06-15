@@ -12,13 +12,10 @@ import { AboutMeComponent } from './controllers/aboutmeController/aboutme.compon
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { HomeComponent } from './controllers/homeController/home.component';
-import { AdminTempComponent } from './controllers/adminTemplate/adminTemp.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
-/* import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core'; */
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -51,7 +48,6 @@ export const firebaseConfig = {
     BlogsComponent,
     BlogPageComponent,
     AboutMeComponent,
-    AdminTempComponent,
     ProductsComponent
   ],
   imports: [
@@ -75,7 +71,6 @@ export const firebaseConfig = {
       { path: 'blog/:blogid', component: BlogPageComponent },
       { path: 'aboutme', component: AboutMeComponent },
       { path: 'products', component: ProductsComponent },
-      { path: 'adminTemp', component: AdminTempComponent },
       { path: '**', component: ErrorComponent }
     ]),
     FontAwesomeModule

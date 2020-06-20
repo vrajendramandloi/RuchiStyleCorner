@@ -204,6 +204,101 @@
   font-size: 20px;
 }
 
+.home-best-comments {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:#FFE5E5;
+  background-image: url('/assets/img/homebackTexture.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-best-comments .comments-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: #8E64D6;
+  padding: 1rem 2rem;
+}
+.home-best-comments .comments-title h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  color: #fff;
+}
+.home-best-comments .comment-floater {
+  padding: 3rem 4rem;
+}
+.home-best-stories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.home-best-stories .stories-title {
+  background-color: #1F1F40;
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.home-best-stories .stories-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-best-stories .stories-container .stories-card {
+  position: relative;
+  max-width: 20rem;
+  max-height: 30rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.3rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  margin: 5rem 1rem 5rem 1rem;
+}
+
+.stories-card .img-box {
+  max-width: 16rem;
+  min-width: 16rem;
+  height: 16rem;
+  transition: .5s;
+  margin: 1rem;
+}
+
+.stories-card .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .4rem;
+  transition: .5s;
+}
+.stories-card .stories-header {
+  width: 100%;
+  padding: 2rem;
+  color: rgb(95, 95, 100);
+}
+
+.stories-card .stories-header h2 {
+  color: #1F1F40;
+}
+
 @media (min-width: 768px) and (orientation:portrait) {
   .home-banner-text {
     padding-left: 4rem;

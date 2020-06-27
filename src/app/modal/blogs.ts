@@ -8,4 +8,6 @@ export interface Blogs {
   blogText: string;
   blogLikes: number;
   blogDislikes: number;
+  blogViews: number;
+  blogGenere: string;
 }

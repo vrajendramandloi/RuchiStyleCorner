@@ -151,6 +151,7 @@
   background: rgb(142, 100, 214);
 }
 .home-social-media .sm-content {
+  cursor: pointer;
   margin: 1rem;
   display: flex;
   flex-direction: row;

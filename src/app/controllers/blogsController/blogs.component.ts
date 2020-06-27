@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
-import { Observable } from 'rxjs';
-import { TestService } from 'src/app/service/Test.service';
+import { Router } from '@angular/router';
 import { Blogs } from 'src/app/modal/blogs';
+import { TestService } from 'src/app/service/Test.service';
 
 @Component({
   selector: 'blogs-control',
@@ -11,15 +10,17 @@ import { Blogs } from 'src/app/modal/blogs';
 })
 export class BlogsComponent implements OnInit {
   loadingApp = true;
-  blogsList: Blogs[] = [];
+  blogsListMap: Map<string, Blogs[]>;
 
-  constructor(private testService: TestService, public sanitizer: DomSanitizer) {
-    console.log('blogs Component called');
-  }
+  constructor(private testService: TestService, private router: Router) { }
 
   ngOnInit() {
-    console.log('Fetching Entries from blogs Service');
-    /* this.blogsList = this.testService.getBlogs();
-    console.log(this.blogsList); */
+    this.testService.getBlogsMap().then(data => {
+      this.blogsListMap = data;
+    });
+  }
+
+  navigateToBlog(blog: Blogs) {
+    this.router.navigate(['/blog', blog]);
   }
 }

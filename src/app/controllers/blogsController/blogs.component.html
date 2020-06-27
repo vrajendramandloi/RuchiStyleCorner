@@ -1,152 +1,32 @@
 <div class="blogs_body">
-  <div class="blog_search">
+  <div class="blog_title_container">
+    <div class="stories-title">
+      <h1>Stories & Inspirations</h1>
+    </div>
     <mat-form-field appearance="outline" color="white">
       <mat-label>Search for Blog info</mat-label>
       <mat-icon matSuffix>search</mat-icon>
       <input matInput placeholder="Title, Author" />
     </mat-form-field>
   </div>
-  <div class="blog_container">
-    <!-- <div class="blogs_post" *ngFor="let blog of blogsList">
-      <div class="blogs_post_img">
-        <img src="{{ blog.blogThumbnail }}" />
-      </div>
-      <div class="blogs_post_info">
-        <h2 class="blogs_title">{{ blog.blogTitle }}</h2>
-        <div class="blogs_post_auth_date">
-          <h4>{{ blog.blogAuthor }}</h4>
-          <span>{{ blog.blogDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</span>
-        </div>
-        <p class="blogs_text">{{ blog.blogText }}</p>
-        <a href="#" class="blogs_cta">Read More ...</a>
-      </div>
-    </div> -->
-    <div class="blogs_post" [routerLink]="['/blog','Flowers_are_precious']">
-      <div class="blogs_post_img">
-        <img src="/assets/img/blogs1.jpg" />
-      </div>
-      <div class="blogs_post_info">
-        <h2 class="blogs_title">Blog 1: Flowers are precious</h2>
-        <div class="blogs_post_auth_date">
-          <h4>Author 1</h4>
-          <span>October, 27 2019</span>
-        </div>
-        <p class="blogs_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-      </div>
+  <div class="blog_container" *ngFor="let recipient of blogsListMap | keyvalue">
+    <div class="blog_genere_heading">
+      <h1>{{recipient.key}}</h1>
     </div>
-    <div class="blogs_post" [routerLink]="['/blog','precious_is_a_keep_owe']">
-      <div class="blogs_post_img">
-        <img src="/assets/img/blogs2.jpg" />
-      </div>
-      <div class="blogs_post_info">
-        <h2 class="blogs_title">Blog 2: precious is a keep owe</h2>
-        <div class="blogs_post_auth_date">
-          <h4>Author 2</h4>
-          <span>October, 27 2019</span>
+    <div class="blog_genere">
+      <div class="blogs_post" *ngFor="let blog of recipient.value" (click)="navigateToBlog(blog)">
+        <div class="blogs_post_img">
+          <img src="{{ blog.blogThumbnail }}" />
         </div>
-        <p class="blogs_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-    </div>
-    <div class="blogs_post">
-      <div class="blogs_post_img">
-        <img src="/assets/img/blogs2.jpg" />
-      </div>
-      <div class="blogs_post_info">
-        <h2 class="blogs_title">Blog 2: precious is a keep owe</h2>
-        <div class="blogs_post_auth_date">
-          <h4>Author 2</h4>
-          <span>October, 27 2019</span>
+        <div class="blogs_post_info">
+          <h2 class="blogs_title">{{ blog.blogTitle }}</h2>
+          <div class="blogs_post_auth_date">
+            <h4>{{ blog.blogAuthor }}</h4>
+            <span>{{ blog.blogDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</span>
+          </div>
+          <p class="blogs_text">{{ blog.blogText }}</p>
+          <a href="#" class="blogs_cta">Click to Read More ...</a>
         </div>
-        <p class="blogs_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-    </div>
-    <div class="blogs_post">
-      <div class="blogs_post_img">
-        <img src="/assets/img/blogs2.jpg" />
-      </div>
-      <div class="blogs_post_info">
-        <h2 class="blogs_title">Blog 2: precious is a keep owe</h2>
-        <div class="blogs_post_auth_date">
-          <h4>Author 2</h4>
-          <span>October, 27 2019</span>
-        </div>
-        <p class="blogs_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-    </div>
-    <div class="blogs_post">
-      <div class="blogs_post_img">
-        <img src="/assets/img/blogs2.jpg" />
-      </div>
-      <div class="blogs_post_info">
-        <h2 class="blogs_title">Blog 2: precious is a keep owe</h2>
-        <div class="blogs_post_auth_date">
-          <h4>Author 2</h4>
-          <span>October, 27 2019</span>
-        </div>
-        <p class="blogs_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-    </div>
-    <div class="blogs_post">
-      <div class="blogs_post_img">
-        <img src="/assets/img/blogs2.jpg" />
-      </div>
-      <div class="blogs_post_info">
-        <h2 class="blogs_title">Blog 2: precious is a keep owe</h2>
-        <div class="blogs_post_auth_date">
-          <h4>Author 2</h4>
-          <span>October, 27 2019</span>
-        </div>
-        <p class="blogs_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-        <a href="#" class="blogs_cta">Read More ...</a>
-      </div>
-    </div>
-    <div class="blogs_post">
-      <div class="blogs_post_img">
-        <img src="/assets/img/blogs2.jpg" />
-      </div>
-      <div class="blogs_post_info">
-        <h2 class="blogs_title">Blog 2: precious is a keep owe</h2>
-        <div class="blogs_post_auth_date">
-          <h4>Author 2</h4>
-          <span>October, 27 2019</span>
-        </div>
-        <p class="blogs_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-          and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
-        <a href="#" class="blogs_cta">Read More ...</a>
       </div>
     </div>
   </div>

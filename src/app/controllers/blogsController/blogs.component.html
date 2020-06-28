@@ -9,7 +9,7 @@
       <input matInput placeholder="Title, Author" />
     </mat-form-field>
   </div>
-  <div class="blog_container" *ngFor="let recipient of blogsListMap | keyvalue">
+  <div class="blog_container" *ngFor="let recipient of blogsListMap | keyvalue : asIsOrder">
     <div class="blog_genere_heading">
       <h1>{{recipient.key}}</h1>
     </div>

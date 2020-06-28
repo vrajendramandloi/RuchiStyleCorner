@@ -19,8 +19,16 @@ export class BlogsComponent implements OnInit {
       this.blogsListMap = data;
     });
   }
-
+  asIsOrder(a, b) {
+    return 1;
+  }
   navigateToBlog(blog: Blogs) {
-    this.router.navigate(['/blog', blog]);
+    const encodedUrl = btoa(JSON.stringify(blog));
+    console.log('encoded' + encodedUrl);
+    const decodedUrl = atob(encodedUrl);
+    const newBlog: Blogs = decodedUrl as unknown as Blogs;
+    console.log(newBlog.blogGenere + "--" + newBlog.blogTitle);
+
+    /* this.router.navigate(['/story', blog]); */
   }
 }

@@ -23,7 +23,7 @@
   /* background-image: url('/assets/img/woven-light.png'); */
   background-size: auto;
   background-position: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   padding-top: 5rem;
 }
 .blog_title_container .stories-title {
@@ -100,8 +100,18 @@
   border-radius: .4rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transition: .5s;
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2.5rem 1rem;
   cursor: pointer;
+  transition: 0.5s ease;
+}
+.blog_container .blogs_post:hover {
+  transform: translateY(-2rem);
+  transition: 0.5s ease;
+  z-index: 10;
+  max-width: 21rem;
+  min-width: 21rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+  /* background-color: #D6D1CB; */
 }
 
 .blog_container .blogs_post .blogs_post_img {
@@ -129,7 +139,21 @@
 
 .blog_container .blogs_post .blogs_post_info h2{
   position: relative;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blog_container .blogs_post:hover .blogs_post_info h2{
+  position: relative;
   word-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: auto;
+  text-overflow: unset;
 }
 
 .blog_container .blogs_post .blogs_post_info .blogs_post_auth_date h4 {

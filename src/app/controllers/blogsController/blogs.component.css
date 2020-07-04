@@ -139,6 +139,7 @@
   padding: 0.2rem 2rem;
   font-size: 20px;
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 .blogs_post .blogs_post_info h1:before {
   position: absolute;
@@ -147,9 +148,28 @@
   height: 1rem;
   left: 20px;
   top: 20px;
-  z-index: 100;
+  z-index: 1;
   background: #FF6161;
   transform: rotate(45deg);
+}
+.blogs_post .blogs_post_info h1 span:nth-child(1) {
+  position: absolute;
+  top:0;
+  left:0;
+  width: 40px;
+  height: 100%;
+  z-index: 10;
+  background: linear-gradient(105deg, rgba(255,255,255,0) 25%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 75%);
+  animation: lightSweepAnimation 2s linear infinite;
+}
+
+@keyframes lightSweepAnimation {
+  0% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(15rem);
+  }
 }
 
 .blogs_post .blogs_post_info h2{

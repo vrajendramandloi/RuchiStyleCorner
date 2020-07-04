@@ -19,7 +19,9 @@
           <img src="{{ blog.blogThumbnail }}" />
         </div>
         <div class="blogs_post_info">
-          <h1 *ngIf="blog.isNewBlog">New Post</h1>
+          <h1 *ngIf="blog.isNewBlog">
+            <span></span>
+            New Post</h1>
           <h2>{{ blog.blogTitle }}</h2>
           <h3>{{ blog.blogAuthor }}</h3>
           <h4>{{ blog.blogDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</h4>

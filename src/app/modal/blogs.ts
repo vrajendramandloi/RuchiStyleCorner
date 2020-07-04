@@ -10,4 +10,5 @@ export interface Blogs {
   blogDislikes: number;
   blogViews: number;
   blogGenere: string;
+  isNewBlog?: boolean;
 }

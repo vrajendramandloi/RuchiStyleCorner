@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Blogs } from 'src/app/modal/blogs';
 import { TestService } from 'src/app/service/Test.service';
+import * as CryptoJS from 'crypto-js';
+import { EncryptDecrypt } from 'src/app/utils/EncryptDecrypt';
 
 @Component({
   selector: 'blogs-control',
@@ -23,12 +25,14 @@ export class BlogsComponent implements OnInit {
     return 1;
   }
   navigateToBlog(blog: Blogs) {
-    const encodedUrl = btoa(JSON.stringify(blog));
-    console.log('encoded' + encodedUrl);
-    const decodedUrl = atob(encodedUrl);
-    const newBlog: Blogs = decodedUrl as unknown as Blogs;
-    console.log(newBlog.blogGenere + "--" + newBlog.blogTitle);
+    const encd = new EncryptDecrypt();
+    const encryptedMsg = encd.encrypt(JSON.stringify(blog.toString()), 'VrajendraMandloi');
+    console.log('encrypted', encryptedMsg);
 
-    /* this.router.navigate(['/story', blog]); */
+    const encd2 = new EncryptDecrypt();
+    const decryptedMsg = encd2.decrypt(encryptedMsg, 'VrajendraMandloi');
+    console.log('decrypted nsg {}', CryptoJS.enc.Base64.parse(decryptedMsg));
+
+    /* this.router.navigate(['/story', { storyDetails: blog }]); */
   }
 }

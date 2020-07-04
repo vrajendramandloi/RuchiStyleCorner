@@ -10,12 +10,10 @@ import { Blogs } from 'src/app/modal/blogs';
 export class BlogPageComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute) {}
   private sub: any;
-  private blog: Blogs;
+  blogDetails: Blogs;
 
   ngOnInit() {
-    this.sub = this.route.paramMap.subscribe(params => {
-      console.log(params);
-    });
+    /* this.blogDetails = this.route.snapshot.paramMap.get('storyDetails') as Blogs; */
   }
   ngOnDestroy() {
     this.sub.unsubscribe();

@@ -68,7 +68,7 @@ export const firebaseConfig = {
       { path: '', component: HomeComponent },
       { path: 'vlogs', component: VlogsComponent },
       { path: 'stories', component: BlogsComponent },
-      { path: 'story/:story', component: BlogPageComponent },
+      { path: 'story/:storyDetails', component: BlogPageComponent },
       { path: 'aboutme', component: AboutMeComponent },
       { path: 'products', component: ProductsComponent },
       { path: '**', component: ErrorComponent }

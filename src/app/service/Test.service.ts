@@ -72,6 +72,7 @@ export class TestService {
               blogGenere: this.generateRandomGenere(),
               blogDateTime: firestore.Timestamp.fromDate(new Date()),
               blogThumbnail: this.generateRandomImage(),
+              isNewBlog: this.generateRandomNumber(),
               blogText: response[i].body + response[i].body + response[i].body + response[i].body
                         + response[i].body + response[i].body + response[i].body + response[i].body
                         + response[i].body + response[i].body + response[i].body + response[i].body
@@ -84,6 +85,11 @@ export class TestService {
         resolve(allBlogs);
       });
     });
+  }
+
+  generateRandomNumber(): boolean {
+    const randomNum = Math.floor(Math.random() * 5);
+    return randomNum === 4;
   }
 
   generateRandomImage(): string {

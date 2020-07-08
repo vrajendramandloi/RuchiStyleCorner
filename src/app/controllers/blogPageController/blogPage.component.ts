@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Blogs } from 'src/app/modal/blogs';
+import { EncryptDecrypt } from 'src/app/utils/EncryptDecrypt';
 
 @Component({
   selector: 'app-blog-page-control',
@@ -13,7 +14,10 @@ export class BlogPageComponent implements OnInit, OnDestroy {
   blogDetails: Blogs;
 
   ngOnInit() {
-    /* this.blogDetails = this.route.snapshot.paramMap.get('storyDetails') as Blogs; */
+    const encryptedMsg = this.route.snapshot.paramMap.get('storyDetails');
+    const encd = new EncryptDecrypt();
+    const decryptedMsg = encd.decrypterRc4(encryptedMsg, 'VrajendraMandloi');
+    this.blogDetails = decryptedMsg as Blogs;
   }
   ngOnDestroy() {
     this.sub.unsubscribe();

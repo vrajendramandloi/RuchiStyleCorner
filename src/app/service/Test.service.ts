@@ -67,13 +67,17 @@ export class TestService {
               blogTitle: response[i].name,
               blogAuthor: response[i].email,
               blogLikes: 200,
-              blogDislikes: 10,
               blogViews: 5000,
               blogGenere: this.generateRandomGenere(),
               blogDateTime: firestore.Timestamp.fromDate(new Date()),
               blogThumbnail: this.generateRandomImage(),
               isNewBlog: this.generateRandomNumber(),
               blogText: response[i].body + response[i].body + response[i].body + response[i].body
+                        + response[i].body + response[i].body + response[i].body + response[i].body
+                        + response[i].body + response[i].body + response[i].body + response[i].body
+                        + response[i].body + response[i].body + response[i].body + response[i].body
+                        + response[i].body + response[i].body + response[i].body + response[i].body
+                        + response[i].body + response[i].body + response[i].body + response[i].body
                         + response[i].body + response[i].body + response[i].body + response[i].body
                         + response[i].body + response[i].body + response[i].body + response[i].body
             };

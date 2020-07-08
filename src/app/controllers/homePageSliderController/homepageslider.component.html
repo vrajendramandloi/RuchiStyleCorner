@@ -1,0 +1,14 @@
+<div class="carousel-container">
+  <ngb-carousel [showNavigationArrows]="true"
+  [showNavigationIndicators]="true"
+  interval="3000">
+    <ng-template ngbSlide *ngFor="let slide of subCompList">
+      <div class="slide-card">
+        <h1>{{slide.name}}</h1>
+        <h5>{{slide.date}}</h5>
+        <br>
+        <h3>"{{slide.comments}}"</h3>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

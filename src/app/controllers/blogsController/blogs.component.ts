@@ -4,6 +4,7 @@ import { Blogs } from 'src/app/modal/blogs';
 import { TestService } from 'src/app/service/Test.service';
 import * as CryptoJS from 'crypto-js';
 import { EncryptDecrypt } from 'src/app/utils/EncryptDecrypt';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'blogs-control',
@@ -26,13 +27,7 @@ export class BlogsComponent implements OnInit {
   }
   navigateToBlog(blog: Blogs) {
     const encd = new EncryptDecrypt();
-    const encryptedMsg = encd.encrypt(JSON.stringify(blog.toString()), 'VrajendraMandloi');
-    console.log('encrypted', encryptedMsg);
-
-    const encd2 = new EncryptDecrypt();
-    const decryptedMsg = encd2.decrypt(encryptedMsg, 'VrajendraMandloi');
-    console.log('decrypted nsg {}', CryptoJS.enc.Base64.parse(decryptedMsg));
-
-    /* this.router.navigate(['/story', { storyDetails: blog }]); */
+    const encryptedMsg2 = encd.encrypterRc4(JSON.stringify(blog), 'VrajendraMandloi');
+    this.router.navigate(['/story',  encryptedMsg2 ]);
   }
 }

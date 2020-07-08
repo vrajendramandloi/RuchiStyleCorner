@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import * as $ from 'jquery';
+declare var $: any;
+declare var InstagramFeed: any;
+import '../../../assets/js/InstagramFeed.min.js';
 
 @Component({
   selector: 'home-component',
@@ -9,7 +11,30 @@ import * as $ from 'jquery';
 export class HomeComponent {
 
   constructor() {
-
+    $(window).on('load', function(){
+      new InstagramFeed({
+        'username': 'ruchiStylecorner',
+        'container': document.getElementById("instagram-header"),
+        'display_profile': true,
+        'display_biography': false,
+        'display_gallery': false,
+        'styling': true,
+        'lazy_load': true
+      });
+      new InstagramFeed({
+        'username': 'ruchiStylecorner',
+        'container': document.getElementById("instagram-feed1"),
+        'display_profile': false,
+        'display_biography': false,
+        'display_gallery': true,
+        'callback': null,
+        'styling': true,
+        'items': 30,
+        'items_per_row': 3,
+        'margin': 0.5,
+        'lazy_load': true
+      });
+    });
   }
   navigateToUrl(event) {
     switch (event) {

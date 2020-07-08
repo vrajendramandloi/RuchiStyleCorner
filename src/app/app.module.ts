@@ -26,6 +26,8 @@ import { ProductsService } from './service/Products.service';
 import { TestService } from './service/Test.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogPageComponent } from './controllers/blogPageController/blogPage.component';
+import { HomePageSliderComponent } from './controllers/homePageSliderController/homepageslider.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -48,7 +50,8 @@ export const firebaseConfig = {
     BlogsComponent,
     BlogPageComponent,
     AboutMeComponent,
-    ProductsComponent
+    ProductsComponent,
+    HomePageSliderComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ export const firebaseConfig = {
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    NgbModule,
     MatSelectModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,

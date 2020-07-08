@@ -226,14 +226,7 @@
   border-radius: 0.5rem;
   background-color: #8E64D6;
   padding: 1rem 2rem;
-}
-.home-best-comments .comments-title h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 30px;
   color: #fff;
-}
-.home-best-comments .comment-floater {
-  padding: 3rem 4rem;
 }
 .home-best-stories {
   display: flex;
@@ -243,6 +236,24 @@
   width: 100%;
 }
 .home-best-stories .stories-title {
+  background-color: #8E64D6;
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.home-instagram-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 100%;
+}
+.home-instagram-panel .socialMedia-title {
   background-color: #1F1F40;
   padding: 2rem 0;
   width: 100%;
@@ -250,6 +261,17 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+}
+
+.home-instagram-panel .instagram-galleryContainer {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4rem 5rem;
+  border-radius: 5rem;
+  overflow: hidden;
 }
 
 .home-best-stories .stories-container {

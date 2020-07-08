@@ -5,10 +5,10 @@
         <img src="{{ blogDetails.blogThumbnail }}" />
       </div>
       <div class="blogPage_post_info">
-        <h2 class="blogPage_title">{{blogDetails.blogTitle}}</h2>
+        <h2>{{blogDetails.blogTitle}}</h2>
         <div class="blogPage_post_auth_date">
           <h4>{{blogDetails.blogAuthor}}</h4>
-          <span>{{ blogDetails.blogDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</span>
+          <span>{{ blogDetails.blogDateTime }}</span>
         </div>
         <div class="blogPage_count_details">
           <div class="outer-div">

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { SubComp } from 'src/app/modal/subComp';
+declare var $: any;
 
 @Component({
   selector: 'app-homepageslider-control',
@@ -18,14 +19,5 @@ export class HomePageSliderComponent implements OnInit {
      });
   }
   ngOnInit() {
-  }
-  onPreviousClick() {
-    const previous = this.currentSlide - 1;
-    this.currentSlide = previous < 0 ? this.subCompList.length - 1 : previous;
-  }
-
-  onNextClick() {
-    const next = this.currentSlide + 1;
-    this.currentSlide = next === this.subCompList.length ? 0 : next;
   }
 }

@@ -1,18 +1,20 @@
 .carousel-container {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  padding: 3rem 6rem;
+  margin: 1rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .slide-card {
   background-color: #1F1F40;
-  padding: 4rem 10rem;
+  padding: 2rem 2rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
   color: aliceblue;
+  min-width: 20%;
 }
-
 
 .carousel-item {
   display: flex !important;
@@ -39,4 +41,30 @@
 
 .carousel-indicators{
   z-index: 20;
+}
+
+
+@media (min-width: 768px) and (orientation:portrait) {
+}
+
+@media (min-width: 1224px) and (orientation:portrait) {
+}
+
+@media all and (orientation:landscape) {
+  .slide-card {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (orientation:landscape) {
+}
+
+@media (min-width: 1024px) and (orientation:landscape) {
+  .slide-card {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
 }

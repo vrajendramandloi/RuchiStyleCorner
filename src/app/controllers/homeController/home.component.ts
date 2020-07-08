@@ -16,7 +16,7 @@ export class HomeComponent {
         'username': 'ruchiStylecorner',
         'container': document.getElementById("instagram-header"),
         'display_profile': true,
-        'display_biography': false,
+        'display_biography': true,
         'display_gallery': false,
         'styling': true,
         'lazy_load': true
@@ -30,7 +30,8 @@ export class HomeComponent {
         'callback': null,
         'styling': true,
         'items': 30,
-        'items_per_row': 3,
+        'items_per_row': 2,
+        'image_size': 200,
         'margin': 0.5,
         'lazy_load': true
       });

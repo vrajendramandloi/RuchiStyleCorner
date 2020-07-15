@@ -131,20 +131,6 @@ ul li a:hover {
   overflow: auto;
 }
 
-.navbar-details .navbar-menu-socialmedia {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-top: 1.5rem;
-  color: #fff;
-}
-
-.navbar-menu-socialmedia a i{
-  font-size: 35px;
-  margin: .5rem;
-}
-
 @media (min-width: 768px) {
   .navbar-container .navbar-toggle a {
     font-size: 28px;
@@ -174,26 +160,14 @@ ul li a:hover {
   .navbar-container .navbar-logo img{
     width: 15rem;
   }
-
   .navbar-details .navbar-menu-logo img{
     width: 12rem;
   }
-
   .navbar-details .navbar-menu-list {
     margin-top: 0.5rem;
   }
-
   ul li a {
     padding: 5px;
-  }
-
-  .navbar-details .navbar-menu-socialmedia {
-    margin-top: 0.5rem;
-  }
-
-  .navbar-menu-socialmedia a i{
-    font-size: 25px;
-    margin: .5rem;
   }
 }
 
@@ -201,25 +175,13 @@ ul li a:hover {
   .navbar-container .navbar-logo img{
     width: 20rem;
   }
-
   .navbar-details .navbar-menu-logo img{
     width: 18rem;
   }
-
   .navbar-details .navbar-menu-list {
     margin-top: 1.5rem;
   }
-
   ul li a {
     padding: 10px;
-  }
-
-  .navbar-details .navbar-menu-socialmedia {
-    margin-top: 1.5rem;
-  }
-
-  .navbar-menu-socialmedia a i{
-    font-size: 25px;
-    margin: .5rem;
   }
 }

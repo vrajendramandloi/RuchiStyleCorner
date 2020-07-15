@@ -28,6 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogPageComponent } from './controllers/blogPageController/blogPage.component';
 import { HomePageSliderComponent } from './controllers/homePageSliderController/homepageslider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrandCollabComponent } from './controllers/brandCollabController/brandCollab.component';
+import { FlickityModule } from 'ngx-flickity';
+import { SmAniCounterComponent } from './controllers/smAniCounter/smAniCounter.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -49,8 +52,10 @@ export const firebaseConfig = {
     VlogsComponent,
     BlogsComponent,
     BlogPageComponent,
+    BrandCollabComponent,
     AboutMeComponent,
     ProductsComponent,
+    SmAniCounterComponent,
     HomePageSliderComponent
   ],
   imports: [
@@ -60,6 +65,7 @@ export const firebaseConfig = {
     MatInputModule,
     MatIconModule,
     NgbModule,
+    FlickityModule,
     MatSelectModule,
     OwlDateTimeModule,
     OwlNativeDateTimeModule,
@@ -75,6 +81,7 @@ export const firebaseConfig = {
       { path: 'story/:storyDetails', component: BlogPageComponent },
       { path: 'aboutme', component: AboutMeComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'testPage', component: SmAniCounterComponent },
       { path: '**', component: ErrorComponent }
     ]),
     FontAwesomeModule

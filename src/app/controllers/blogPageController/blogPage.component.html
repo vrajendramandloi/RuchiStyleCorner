@@ -1,45 +1,43 @@
 <div class="blogPage_body">
-  <div class="blogPage_container">
-    <div class="blogPage_post">
-      <div class="blogPage_post_img">
-        <img src="{{ blogDetails.blogThumbnail }}" />
+  <div class="blogPage_post">
+    <div class="blogPage_post_img">
+      <img src="{{ blogDetails.blogThumbnail }}" />
+    </div>
+    <div class="blogPage_post_info">
+      <h2>{{blogDetails.blogTitle}}</h2>
+      <div class="blogPage_post_auth_date">
+        <h4>{{blogDetails.blogAuthor}}</h4>
+        <span>{{ blogDetails.blogDateTime }}</span>
       </div>
-      <div class="blogPage_post_info">
-        <h2>{{blogDetails.blogTitle}}</h2>
-        <div class="blogPage_post_auth_date">
-          <h4>{{blogDetails.blogAuthor}}</h4>
-          <span>{{ blogDetails.blogDateTime }}</span>
+      <div class="blogPage_count_details">
+        <div class="outer-div">
+          <mat-icon>thumb_up</mat-icon>
+          <span>{{ blogDetails.blogLikes }}</span>
         </div>
-        <div class="blogPage_count_details">
-          <div class="outer-div">
-            <mat-icon>thumb_up</mat-icon>
-            <span>{{ blogDetails.blogLikes }}</span>
-          </div>
-          <div class="vl"></div>
-          <div class="outer-div">
-            <mat-icon>visibility</mat-icon>
-            <span>{{ blogDetails.blogViews }}</span>
-          </div>
-          <div class="vl"></div>
-          <div class="outer-div">
-            <mat-icon class="fa-flip-horizontal" style="font-size: 25px;">reply</mat-icon>
-            <span>Share</span>
-          </div>
-          <div class="vl"></div>
-          <div class="outer-div" >
-            <mat-icon>message</mat-icon>
-            <span>Comments</span>
-          </div>
+        <div class="vl"></div>
+        <div class="outer-div">
+          <mat-icon>visibility</mat-icon>
+          <span>{{ blogDetails.blogViews }}</span>
         </div>
-        <p class="blogPage_text">{{ blogDetails.blogText }}</p>
+        <div class="vl"></div>
+        <div class="outer-div">
+          <mat-icon class="fa-flip-horizontal" style="font-size: 25px;">reply</mat-icon>
+          <span>Share</span>
+        </div>
+        <div class="vl"></div>
+        <div class="outer-div" >
+          <mat-icon>message</mat-icon>
+          <span>Comments</span>
+        </div>
       </div>
-      <div class="blogPage_Comments" id="blogPage_Comments">
-        <span style="font-weight: bold;">Comments:</span>
-        <div class="blogPage_inputComment">
-          <mat-form-field appearance="outline" color="black">
-            <input matInput placeholder="Input you Views on above blog.." />
-          </mat-form-field>
-        </div>
+      <span class="blogPage_content" [innerHTML]="blogDetails.blogText"></span>
+    </div>
+    <div class="blogPage_Comments" id="blogPage_Comments">
+      <span style="font-weight: bold;">Comments:</span>
+      <div class="blogPage_inputComment">
+        <mat-form-field appearance="outline" color="black">
+          <input matInput placeholder="Input you Views on above blog.." />
+        </mat-form-field>
       </div>
     </div>
   </div>

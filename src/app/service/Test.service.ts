@@ -72,14 +72,15 @@ export class TestService {
               blogDateTime: firestore.Timestamp.fromDate(new Date()),
               blogThumbnail: this.generateRandomImage(),
               isNewBlog: this.generateRandomNumber(),
-              blogText: response[i].body + response[i].body + response[i].body + response[i].body
-                        + response[i].body + response[i].body + response[i].body + response[i].body
-                        + response[i].body + response[i].body + response[i].body + response[i].body
-                        + response[i].body + response[i].body + response[i].body + response[i].body
-                        + response[i].body + response[i].body + response[i].body + response[i].body
-                        + response[i].body + response[i].body + response[i].body + response[i].body
-                        + response[i].body + response[i].body + response[i].body + response[i].body
-                        + response[i].body + response[i].body + response[i].body + response[i].body
+              blogText: "NEW DELHI: A “special arrangement” aerial connectivity could roll out between India and the US, France and Germany within a week. Airlines of both sides will be allowed to operate flights and carry passengers in and out of India who are eligible to do so under the home ministry rules, said people in the know."
+              +"<br /><br /> It is reliably learnt that talks with US, France and Germany are at a very advanced stage and announcements could come within a week. Separately, India is in discussion with UAE also to facilitate the travel of people from here."
+              +"<br /><br />India had recently spoken of creating travel corridors with US, UK, France and Germany to facilitate travel during the pandemic and till schedule flights are resumed. With the Gulf, arrangements are being to operate charter flights to allow both way travel of eligible people."
+              +"<br /><br />At the moment airlines like Lufthansa, Air France and United are allowed to operate repatriation flights mainly to fly eligible people out of India. But under the special arrangement, travellers — as per the MHA travel eligibility order — will be able to fly both in and out of India on airlines of India and Germany, France and America."
+              +"<br /><br />For instance, Lufthansa website says “as per the approval given by the Director General of Civil Aviation, only the following persons shall be allowed to travel on the special repatriation fights: All German and EU nationals/residents; all other foreign nationals transiting through a Lufthansa hub… and Indian nationals holding US green cards or Canadian permanent residence status are only permitted on this special repatriation flight if he/she is a spouse of US/Canadian national."
+              +"<br /><br />Once this arrangement is made with other countries, their airlines will also reciprocally carry traffic in and out of India as per MHA directives. People in the know say announcements to the effect with some countries could start coming this week itself."
+              +"<br /><br />Scheduled international passenger flights were suspended on March 22 and are for now not allowed till the month-end except on certain routes that the government may specifically allow. Air India has been operating repatriation flights under Vande Bharat Mission (VBM) since May 6, primarily to bring back Indians stranded abroad and has flown back thousands of people so far. AI had been flying people on VBM flights out of India to certain countries like US, Germany, UK and France (till recently) who were allowing incoming traffic. VBM is now the world’s largest repatriation exercise with private Indian airlines also participating."
+              +"<br /><br />In recent weeks, US, France and Germany have asked India to allow their airlines to operate flights like AI’s VBM. France has stopped allowing people to fly on VBM flights to Paris and US has said unless the issue is resolved, AI will need permission to operate the VBM flights to the country from later this month. The special arrangement being made will allow people to travel between India and countries like US, Germany and France."
+              +"<br /><br />The MHA currently allows certain categories of foreign nationals, including overseas citizens of India (OCI) cardholders, to enter India. These include foreign nationals married to Indian citizens; foreign national student with one parent being an OCI card holder or an Indian citizen; minor children who have OCI cards and whose parents are Indian citizens and OCI card holders who need to come here due to family emergencies."
             };
             allBlogs.push(newBlog);
           } catch (error) {

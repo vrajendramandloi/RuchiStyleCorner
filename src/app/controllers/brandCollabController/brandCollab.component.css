@@ -1,0 +1,41 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: blue;
+}
+.carouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  overflow: hidden;
+  background-color: aqua;
+}
+
+.brandCollab_post {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+.brandCollab_post .brandCollab_post_img {
+  max-width: 5rem;
+  min-width: 5rem;
+  height: 5rem;
+}
+.brandCollab_post .brandCollab_post_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+.brandCollab_post .brandCollab_post_info h2 {
+  font-size: 15px;
+  color: #999;
+}
+

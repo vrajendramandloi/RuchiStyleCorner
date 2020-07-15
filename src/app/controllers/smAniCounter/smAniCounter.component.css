@@ -1,0 +1,113 @@
+.smCounter_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.smCounter_title {
+  color: #fff;
+}
+.smCounter_title h3 {
+  font-size: 30px;
+  border-bottom-left-radius: 8rem;
+  border-bottom-right-radius: 8rem;
+  background-color:#470FA8;
+  color: #fff;
+  padding: 1rem 4rem;
+}
+
+.smCountAmiContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  transition: 1s ease-in;
+}
+.smGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.smCountCard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  color: #999;
+  transition: 0.5s ease-in;
+}
+.smCountCard i{
+  font-size: 35px;
+}
+.smCountCard h3 {
+  padding-top: 0.5rem;
+  font-size: 15px;
+  color: #999;
+}
+.firstChild {
+  animation: bounceInLeft;
+  animation-duration: 1s;
+}
+.secondChild {
+  animation: bounceInLeft;
+  animation-duration: 1.5s;
+}
+.thirdChild {
+  animation: bounceInLeft;
+  animation-duration: 2s;
+}
+.fourthChild {
+  animation: bounceInLeft;
+  animation-duration: 2.5s;
+}
+
+
+@media (min-width: 768px) and (orientation:portrait) {
+}
+
+@media (min-width: 1224px) and (orientation:portrait) {
+  .smCountCard i{
+    font-size: 45px;
+  }
+  .smCountCard h3 {
+    padding-top: 1rem;
+    font-size: 20px;
+  }
+}
+
+@media all and (orientation:landscape) {
+  .smCountCard {
+    color: #fff;
+    background-color:gold;
+  }
+  .smCountCard i{
+    font-size: 35px;
+  }
+  .smCountCard h3 {
+    padding-top: 0.5rem;
+    font-size: 15px;
+    color: #999;
+  }
+}
+
+@media (min-width: 768px) and (orientation:landscape) {
+}
+
+@media (min-width: 1224px) and (orientation:landscape) {
+  .smCountCard i{
+    font-size: 45px;
+  }
+  .smCountCard h3 {
+    padding-top: 1rem;
+    font-size: 20px;
+  }
+}

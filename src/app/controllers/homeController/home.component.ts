@@ -1,7 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { SocialMediaDetails, SubComp } from 'src/app/modal/subComp.js';
+import '../../../assets/js/InstagramFeed.min.js';
 declare var $: any;
 declare var InstagramFeed: any;
-import '../../../assets/js/InstagramFeed.min.js';
 
 @Component({
   selector: 'home-component',
@@ -9,8 +11,8 @@ import '../../../assets/js/InstagramFeed.min.js';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
-  constructor() {
+  smdetails: SocialMediaDetails[] = [];
+  constructor(private http: HttpClient) {
     $(window).on('load', function(){
       new InstagramFeed({
         'username': 'ruchiStylecorner',
@@ -30,32 +32,16 @@ export class HomeComponent {
         'callback': null,
         'styling': true,
         'items': 30,
-        'items_per_row': 2,
+        'items_per_row': 3,
         'image_size': 200,
         'margin': 0.5,
         'lazy_load': true
       });
     });
   }
-  navigateToUrl(event) {
-    switch (event) {
-      case 'YOUTUBE': {
-         window.open('https://www.youtube.com/channel/UCo1Rx0-CfOuxoTmOcjiCtHQ');
-         break;
-      }
-      case 'INSTAGRAM': {
-        window.open('https://www.youtube.com/channel/UCo1Rx0-CfOuxoTmOcjiCtHQ');
-        break;
-      }
-      case 'TWITTER': {
-        window.open('https://www.youtube.com/channel/UCo1Rx0-CfOuxoTmOcjiCtHQ');
-        break;
-      }
-      case 'SNAPCHAT': {
-        window.open('https://www.youtube.com/channel/UCo1Rx0-CfOuxoTmOcjiCtHQ');
-        break;
-      }
-   }
+
+  navigateToUrl(url) {
+    window.open(url);
   }
   scrollToBottom() {
     $('html,body').animate({scrollTop: document.body.scrollHeight}, '2000');

@@ -41,8 +41,8 @@
   color: #DCA141;
 }
 
-.home-banner-text h1 {
-  font-size: 20px;
+.home-banner-text button {
+  background-color: #DCA141;
 }
 
 .home-banner-image {
@@ -66,16 +66,14 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 3rem;
-  height: 2.8rem;
+  padding: 2rem 0;
 }
 .home-center-title h1 {
-  border-bottom-left-radius: 8rem;
-  border-bottom-right-radius: 8rem;
-  background-color:#470FA8;
-  color: #fff;
+  color: #470FA8;
   padding: 1rem 4rem;
-  transform: translateY(1.5rem);
   font-size: 40px;
+  background-color: #fff;
+  border-radius: 5rem;
 }
 
 .home-content-card {
@@ -93,6 +91,8 @@
 }
 
 .home-content-card .content-card {
+  animation: jackInTheBox;
+  animation-duration: 1.5s;
   position: relative;
   max-width: 20rem;
   max-height: 18rem;
@@ -144,7 +144,9 @@
   visibility: visible;
   overflow: auto;
 }
-
+.home-social-media-back {
+  background-color: #470FA8;
+}
 .home-social-media {
   display: flex;
   justify-content: center;
@@ -152,6 +154,9 @@
   flex-wrap: wrap;
   flex-direction: row;
   background: rgb(142, 100, 214);
+  padding-bottom: 3rem;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
 }
 .home-social-media .sm-content {
   cursor: pointer;
@@ -226,8 +231,8 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 2rem;
-  border-radius: 0.5rem;
-  background-color: #8E64D6;
+  border-radius: 5rem;
+  background-color: #470FA8;
   padding: 1rem 2rem;
   color: #fff;
   max-width: 20rem;

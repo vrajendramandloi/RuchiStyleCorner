@@ -12,10 +12,10 @@ declare var InstagramFeed: any;
 })
 export class HomeComponent {
   smdetails: SocialMediaDetails[] = [];
-  constructor(private http: HttpClient) {
-    $(window).on('load', function(){
+  constructor() {
+    $(window).on('load', function() {
       new InstagramFeed({
-        'username': 'ruchiStylecorner',
+        'username': 'vikkymandloi',
         'container': document.getElementById("instagram-header"),
         'display_profile': true,
         'display_biography': true,
@@ -24,13 +24,13 @@ export class HomeComponent {
         'lazy_load': true
       });
       new InstagramFeed({
-        'username': 'ruchiStylecorner',
+        'username': 'vikkymandloi',
         'container': document.getElementById("instagram-feed1"),
         'display_profile': false,
         'display_biography': false,
         'display_gallery': true,
         'callback': null,
-        'styling': true,
+        'styling': false,
         'items': 30,
         'items_per_row': 3,
         'image_size': 200,
@@ -38,6 +38,10 @@ export class HomeComponent {
         'lazy_load': true
       });
     });
+  }
+
+  getItemsPerRow() {
+    console.log('WIDTH is {}', $(window).width());
   }
 
   navigateToUrl(url) {

@@ -12,6 +12,7 @@ import { AboutMeComponent } from './controllers/aboutmeController/aboutme.compon
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { HomeComponent } from './controllers/homeController/home.component';
+import { DisplayDialogUtils } from './dialog/displayDialogUtils';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -31,6 +32,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrandCollabComponent } from './controllers/brandCollabController/brandCollab.component';
 import { FlickityModule } from 'ngx-flickity';
 import { SmAniCounterComponent } from './controllers/smAniCounter/smAniCounter.component';
+import { PromotionsComponent } from './controllers/promotionsController/promotions.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -54,6 +57,7 @@ export const firebaseConfig = {
     BlogPageComponent,
     BrandCollabComponent,
     AboutMeComponent,
+    PromotionsComponent,
     ProductsComponent,
     SmAniCounterComponent,
     HomePageSliderComponent
@@ -64,6 +68,7 @@ export const firebaseConfig = {
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatDialogModule,
     NgbModule,
     FlickityModule,
     MatSelectModule,
@@ -81,6 +86,7 @@ export const firebaseConfig = {
       { path: 'story/:storyDetails', component: BlogPageComponent },
       { path: 'aboutme', component: AboutMeComponent },
       { path: 'products', component: ProductsComponent },
+      { path: 'promotions', component: PromotionsComponent },
       { path: 'testPage', component: SmAniCounterComponent },
       { path: '**', component: ErrorComponent }
     ]),
@@ -90,7 +96,8 @@ export const firebaseConfig = {
     VideoLogsService,
     BLogsService,
     ProductsService,
-    TestService
+    TestService,
+    DisplayDialogUtils
   ],
   bootstrap: [AppComponent]
 })

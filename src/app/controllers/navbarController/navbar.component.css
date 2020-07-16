@@ -91,6 +91,10 @@
 
 .navbar-details .navbar-menu-logo {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .navbar-details .navbar-menu-logo img{

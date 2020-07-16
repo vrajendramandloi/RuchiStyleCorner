@@ -6,12 +6,19 @@
     <div class="aboutme_details">
       <div class="aboutme_content">
         <h2>Welcome All,</h2>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-          Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
-          PageMaker including versions of Lorem Ipsum.</p>
+        <p>
+          <br><br>
+          Hello All, I am Ruchi and i hereby welcome you all to my world of happiness.
+          <br><br>
+          I am MTech grad, turned into Youtube Content creater. I started my Youtube Channel in early 2017.
+          My journey as a content creater is like a boat sailing in ocean, sometime rough sometimes smooth,
+          but I must say with the support of Family, and you all i.e. Youtube Subscribers Family, this couldn't be easy.
+          <br><br>
+          I have build videos regarding DIY, Home-Decor, Vlogs to entratain and educate people. I give my honest
+          reviews for the products I obtain. My main goal is inspire people into their day to day life, thoughts for a
+          happy living.
+          I am as Joyful as you see me in my videos and so do I like to inspire people life as well.
+        </p>
         <h3>Kindly subscribe and follow me on:</h3>
         <div class="aboutme_socialmedia">
           <ul>
@@ -22,26 +29,65 @@
           </ul>
         </div>
       </div>
-      <div class="contactModes">
-        <div class="contactModes_title">
-          <h3>Contact Modes</h3>
-          <hr>
-          <div>
-            <div class="contactModes_container">
-              <div class="brandCollab">
-                <i class="fa fa-handshake-o" aria-hidden="true"> <br /> Brand Collaborations </i>
-              </div>
-              <div class="whatsAppContact">
-                <i class="fa fa fa-whatsapp" aria-hidden="true"> <br /> WhatsApp </i>
-              </div>
-            </div>
-          </div>
-          <h3>Brand Collaboration/Advertising Partnership</h3>
-          <hr>
-          <div class="aboutme_brandCollab">
-            <app-brandCollab></app-brandCollab>
-          </div>
+      <div class="contact-options">
+        <p>For Brand Collaboration or Advertising Partner contact us on:</p>
+        <div class="option">
+          <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+          <h4>dummy@abc.com</h4>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="aboutme_infoColl">
+    <div class="aboutme_container2">
+      <div class="whatsapp-reg" [formGroup]="regWhatsAppFormGroup">
+        <h5>Register for Updates</h5>
+        <mat-form-field class="matFieldString" appearance="outline">
+          <input matInput placeholder="User full Name" formControlName="fc_userFullName" />
+          <mat-error *ngIf="fc_userFullName.hasError('required')">Kindly enter full name plz</mat-error>
+        </mat-form-field>
+        <div class="mobilenumInput">
+          <mat-form-field class="mobile_num_prefix" appearance="outline">
+            <input matInput placeholder="+91" formControlName="fc_userMobileNumberPrefix" >
+            <mat-error *ngIf="!fc_userMobileNumberPrefix.valid">*</mat-error>
+          </mat-form-field>
+          <mat-form-field class="mobile_num" appearance="outline">
+            <input matInput placeholder="999 999 9999"
+            onkeyup="this.value=this.value.replace(/[^\d]/,'')"
+            maxlength="10" formControlName="fc_userMobileNumber" />
+            <mat-error *ngIf="fc_userMobileNumber.hasError('required')">Mobile Number is Required</mat-error>
+          </mat-form-field>
+        </div>
+        <mat-form-field class="matFieldString" appearance="outline">
+          <input matInput placeholder="Email id (optional)" formControlName="fc_userEmailId" />
+        </mat-form-field>
+        <mat-form-field class="matFieldString" appearance="outline">
+          <mat-label>Genere you like</mat-label>
+          <mat-select formControlName="fc_userPrefGenere">
+            <mat-option value="All">All</mat-option>
+            <mat-option value="DIY">DIY's</mat-option>
+            <mat-option value="HomeDecor">Home Decor</mat-option>
+            <mat-option value="LifeStyle">Life Style</mat-option>
+            <mat-option value="Products">New Products</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <i class="fa fa-whatsapp btn btn-success" style="cursor: pointer;" aria-hidden="true"
+        (click)="registerForWhatsApp()"> Register </i>
+      </div>
+    </div>
+    <div class="aboutme_container2">
+      <div class="brandCollab">
+        <h5>Brand Collaborated</h5>
+        <hr>
+        <div class="aboutme_brandCollab">
+          <app-brandCollab></app-brandCollab>
+        </div>
+        <p>
+          Above are some successful brand collaborations which i have done. As per my Authentic
+          true review many of my subscribers have great faith in me.
+
+          ** For brand collaboration or Advertizing kindly contact me on above email ID.
+        </p>
       </div>
     </div>
   </div>

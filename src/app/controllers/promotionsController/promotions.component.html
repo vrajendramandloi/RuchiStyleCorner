@@ -1,0 +1,34 @@
+<div class="blogs_body">
+    <div class="blog_title_container">
+      <div class="stories-title">
+        <h1>Stories & Inspirations</h1>
+      </div>
+      <mat-form-field appearance="outline" color="white">
+        <mat-label>Search for Blog info</mat-label>
+        <mat-icon matSuffix>search</mat-icon>
+        <input matInput placeholder="Title, Author" />
+      </mat-form-field>
+    </div>
+    <div class="blog_container" *ngFor="let recipient of blogsListMap | keyvalue : asIsOrder">
+      <div class="blog_genere_heading">
+        <h1>{{recipient.key}}</h1>
+      </div>
+      <div class="blog_genere">
+        <div class="blogs_post" *ngFor="let blog of recipient.value" (click)="navigateToBlog(blog)">
+          <div class="blogs_post_img">
+            <img src="{{ blog.blogThumbnail }}" />
+          </div>
+          <div class="blogs_post_info">
+            <h1 *ngIf="blog.isNewBlog">
+              <span></span>
+              New Post</h1>
+            <h2>{{ blog.blogTitle }}</h2>
+            <h3>{{ blog.blogAuthor }}</h3>
+            <h4>{{ blog.blogDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</h4>
+            <p class="blogs_text">{{ blog.blogText }}</p>
+            <a href="#" class="blogs_cta">Click to Read More ...</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

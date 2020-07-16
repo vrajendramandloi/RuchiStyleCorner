@@ -241,6 +241,15 @@
 .home-best-comments .comments-title h1{
   font-size: 30px;
 }
+.home-best-comments .comment-floater {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 2rem 1rem;
+  border-radius: 2rem;
+}
+
 .home-best-stories {
   display: flex;
   justify-content: center;

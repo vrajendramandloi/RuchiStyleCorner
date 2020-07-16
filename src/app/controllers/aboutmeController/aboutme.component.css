@@ -26,6 +26,7 @@
   transition: 0.5s;
   position: relative;
   padding: 1rem;
+  margin-top: 2rem;
 }
 
 .aboutme_container .aboutme_imgbx {
@@ -139,113 +140,101 @@
   background-color: #1877f2;
 }
 
-.aboutme_details .contactModes {
+.contact-options {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
   flex-direction: column;
-  position: relative;
 }
 
-.contactModes .contactModes_title {
-  position: relative;
+.contact-options p {
+  font-size: 15px;
+  text-align: justify;
 }
 
-.contactModes .contactModes_title h3 {
-  font-size: 25px;
-}
-
-.contactModes .contactModes_container {
+.contact-options .option {
   display: flex;
-  justify-content: center;
-  position: relative;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.contactModes_container .brandCollab {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 14rem;
-  height: 6rem;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #1877f2;
-  color: #fff;
-  font-size: 25px;
-  text-align: center;
-  box-shadow: inset -1px -1px 2px rgba(0,0,0,0.5),
-              2px 2px 5px rgba(0,0,0,0.5);
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-.contactModes_container .whatsAppContact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 14rem;
-  height: 6rem;
-  flex-direction: column;
-  border-radius: 0.5rem;
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #1EA277;
-  color: #fff;
-  font-size: 25px;
-  text-align: center;
-  box-shadow: inset -1px -1px 2px rgba(0,0,0,0.5),
-              2px 2px 5px rgba(0,0,0,0.5);
-  transition: 0.5s;
-  cursor: pointer;
-}
-
-.contactModes .brandCollab:hover{
-  border: 2px solid rgba(255, 255, 255, 1);
-  transform: translateY(-0.2rem);
-  box-shadow: inset -1px -1px 2px rgba(0,0,0,0.2),
-              2px 24px 10px rgba(0,0,0,0.2);
-}
-
-.contactModes_container .whatsAppContact:hover{
-  border: 2px solid rgba(255, 255, 255, 1);
-  transform: translateY(-0.2rem);
-  box-shadow: inset -1px -1px 2px rgba(0,0,0,0.2),
-              2px 24px 10px rgba(0,0,0,0.2);
-}
-
-.brandCollabList {
-  display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
   flex-direction: row;
-  flex-wrap: wrap;
 }
-.brandCollabList ul {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: center;
-  align-items: center;
+.contact-options p {
+  font-size: 24px;
 }
-.brandCollabList ul li {
-  list-style: none;
-  position: relative;
+.contact-options .option i {
+  font-size: 24px;
+  margin-right: 2rem;
+}
+.contact-options .option h4 {
+  font-size: 24px;
 }
 
-.aboutme_brandCollab {
+.aboutme_infoColl {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+}
+.aboutme_infoColl .aboutme_container2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0.8rem;
+  transition: 0.5s;
+  position: relative;
+  padding: 1rem;
+  margin: 2rem;
+  max-width: 50%;
+  height: 35rem;
+}
+.aboutme_container2 h5 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 25px;
+  border-radius: 5rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  background: #1877f2;
+}
+
+.whatsapp-reg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.whatsapp-reg .matFieldString {
+  width: 16rem;
+}
+.whatsapp-reg .mobilenumInput {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.whatsapp-reg .mobilenumInput .mobile_num_prefix {
+  width: 4rem;
+}
+.whatsapp-reg .mobilenumInput .mobile_num {
+  width: 12rem;
+}
+
+.brandCollab p {
+  font-size: 15px;
+  padding-top: 2rem;
   width: 100%;
+}
+.aboutme_brandCollab {
   position: relative;
   overflow: hidden;
-  padding: 1rem;
+  padding: 2rem 4rem;
+  cursor: grab;
 }
 
 @media (min-width: 768px) and (orientation:portrait) {
@@ -285,6 +274,9 @@
   }
   .aboutme_container {
     width: 70%;
+  }
+  .aboutme_infoColl .aboutme_container2 {
+
   }
   .aboutme_container .aboutme_imgbx {
     max-width: 26rem;

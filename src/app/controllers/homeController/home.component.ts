@@ -15,7 +15,7 @@ export class HomeComponent {
   constructor() {
     $(window).on('load', function() {
       new InstagramFeed({
-        'username': 'vikkymandloi',
+        'username': 'ruchistylecorner',
         'container': document.getElementById("instagram-header"),
         'display_profile': true,
         'display_biography': true,
@@ -24,16 +24,14 @@ export class HomeComponent {
         'lazy_load': true
       });
       new InstagramFeed({
-        'username': 'vikkymandloi',
+        'username': 'ruchistylecorner',
         'container': document.getElementById("instagram-feed1"),
         'display_profile': false,
         'display_biography': false,
         'display_gallery': true,
         'callback': null,
         'styling': false,
-        'items': 30,
-        'items_per_row': 3,
-        'image_size': 200,
+        'items': 90,
         'margin': 0.5,
         'lazy_load': true
       });

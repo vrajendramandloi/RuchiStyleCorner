@@ -29,11 +29,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { BlogPageComponent } from './controllers/blogPageController/blogPage.component';
 import { HomePageSliderComponent } from './controllers/homePageSliderController/homepageslider.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BrandCollabComponent } from './controllers/brandCollabController/brandCollab.component';
 import { FlickityModule } from 'ngx-flickity';
 import { SmAniCounterComponent } from './controllers/smAniCounter/smAniCounter.component';
 import { PromotionsComponent } from './controllers/promotionsController/promotions.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CarouselComponent } from './controllers/carouselController/carousel.component';
+import { PromoPanelComponent } from './controllers/promoPanelController/promopanel.component';
+import { PromotionService } from './service/Promotions.service';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyACVPW520b_cF6dtJIiMg4NJ9_Rmfv1qHo',
@@ -55,8 +57,9 @@ export const firebaseConfig = {
     VlogsComponent,
     BlogsComponent,
     BlogPageComponent,
-    BrandCollabComponent,
+    PromoPanelComponent,
     AboutMeComponent,
+    CarouselComponent,
     PromotionsComponent,
     ProductsComponent,
     SmAniCounterComponent,
@@ -88,6 +91,8 @@ export const firebaseConfig = {
       { path: 'products', component: ProductsComponent },
       { path: 'promotions', component: PromotionsComponent },
       { path: 'testPage', component: SmAniCounterComponent },
+      { path: 'promopanel', component: PromoPanelComponent },
+      { path: 'carousel', component: CarouselComponent },
       { path: '**', component: ErrorComponent }
     ]),
     FontAwesomeModule
@@ -97,7 +102,8 @@ export const firebaseConfig = {
     BLogsService,
     ProductsService,
     TestService,
-    DisplayDialogUtils
+    DisplayDialogUtils,
+    PromotionService
   ],
   bootstrap: [AppComponent]
 })

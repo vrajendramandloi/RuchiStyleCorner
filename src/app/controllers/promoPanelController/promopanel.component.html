@@ -1,0 +1,28 @@
+<div class="promo_panel" *ngIf="ispromoLoaded | async">
+  <div class="promo_panel_image_carousel">
+    <h1 *ngIf="promotionObject.newLaunch">
+        <span></span>
+        New Product</h1>
+    <app-carousel [imageUrlList]="promoPanelImageList" [imageTimer]="5000"
+    [showArrow]="false" [showDots]="true"
+    [isTextVisible]="false"></app-carousel>
+  </div>
+  <div class="promo_panel_details">
+    <h1>{{promotionObject.brand_product_name}}</h1>
+    <h4>{{promotionObject.brand_name}}</h4>
+    <div class="product_visual_details">
+      <div class="star_details">
+        {{promotionObject.stars}}
+        <mat-icon>stars</mat-icon>
+      </div>
+      <h4>{{promotionObject.product_type}}</h4>
+    </div>
+    <h4>Review by:<b> {{promotionObject.reviewBy}} </b></h4>
+    <b style="color: #999; padding-top: 1rem;">Review Notes:</b>
+    <p>{{promotionObject.reviewNote}}</p>
+    <div class="promotionBuy" *ngFor="let item of promotionObject.buyLinks">
+      <a href="item.link">{{item.linkName}}</a>
+      <span>{{item.discount}} | {{item.promocode}}</span>
+    </div>
+  </div>
+</div>

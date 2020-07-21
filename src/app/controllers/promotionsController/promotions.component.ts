@@ -1,9 +1,7 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Blogs } from 'src/app/modal/blogs';
-import { TestService } from 'src/app/service/Test.service';
-import { EncryptDecrypt } from 'src/app/utils/EncryptDecrypt';
+import { PromotionService } from 'src/app/service/Promotions.service';
+import { CarouselComponentData } from '../carouselController/carousel.component';
+import { PromoPanelReviewModal } from '../promoPanelController/promopanel.component';
 
 @Component({
   selector: 'app-promotions-control',
@@ -12,23 +10,17 @@ import { EncryptDecrypt } from 'src/app/utils/EncryptDecrypt';
 })
 export class PromotionsComponent implements OnInit {
   loadingApp = true;
-  blogsListMap: Map<string, Blogs[]>;
-
-  constructor(private testService: TestService,
-              private router: Router, private location: Location,
-              private activatedRoute: ActivatedRoute) { }
-
+  imagesList: CarouselComponentData[] = [];
+  promotionsList: PromoPanelReviewModal[] = [];
+  promoListLoaded: Promise<boolean>;
+  constructor(private promotionsService: PromotionService) { }
   ngOnInit() {
-    this.testService.getBlogsMap().then(data => {
-      this.blogsListMap = data;
+    this.promotionsService.getAllPromoBanners().then(data => {
+      this.imagesList = data;
     });
-  }
-  asIsOrder(a, b) {
-    return 1;
-  }
-  navigateToBlog(blog: Blogs) {
-    const encd = new EncryptDecrypt();
-    const encryptedMsg2 = encd.encrypterRc4(JSON.stringify(blog), 'VrajendraMandloi');
-    this.router.navigate(['/story',  encryptedMsg2 ], { relativeTo: this.activatedRoute.parent });
+    this.promotionsService.getAllPromotions().then(data => {
+      this.promotionsList = data;
+      this.promoListLoaded = Promise.resolve(true);
+    });
   }
 }

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { DisplayDialogUtils } from '../../dialog/displayDialogUtils';
+import { HttpClient } from '@angular/common/http';
+import { CarouselComponentData } from '../carouselController/carousel.component';
 
 @Component({
   selector: 'aboutme-control',
@@ -8,7 +10,13 @@ import { DisplayDialogUtils } from '../../dialog/displayDialogUtils';
   styleUrls: ['./aboutme.component.css']
 })
 export class AboutMeComponent {
-  constructor(private displayDialog: DisplayDialogUtils) { }
+  private _jsonURL = 'assets/customJsonData/brandsCollaborated.json';
+  imagesList: CarouselComponentData[] = [];
+  constructor(private displayDialog: DisplayDialogUtils, private http: HttpClient) {
+    this.http.get(this._jsonURL).subscribe((data: CarouselComponentData[]) => {
+      this.imagesList = data;
+    });
+  }
   regWhatsAppFormGroup = new FormGroup({
     fc_userFullName: new FormControl('', [Validators.required]),
     fc_userMobileNumberPrefix: new FormControl('+91', [

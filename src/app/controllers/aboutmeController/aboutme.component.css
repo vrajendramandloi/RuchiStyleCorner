@@ -190,7 +190,8 @@
   padding: 1rem;
   margin: 2rem;
   max-width: 50%;
-  height: 35rem;
+  min-width: 18rem;
+  height: 40rem;
 }
 .aboutme_container2 h5 {
   text-align: center;
@@ -236,6 +237,20 @@
   padding: 2rem 4rem;
   cursor: grab;
 }
+.aboutme_brandCollab /deep/ img {
+  max-width: 8rem;
+  min-width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+}
+.aboutme_brandCollab /deep/ h2 {
+  margin-top: 1rem;
+  font-size: 15px;
+  color: #999;
+}
+
 
 @media (min-width: 768px) and (orientation:portrait) {
   .aboutme_container {
@@ -274,9 +289,6 @@
   }
   .aboutme_container {
     width: 70%;
-  }
-  .aboutme_infoColl .aboutme_container2 {
-
   }
   .aboutme_container .aboutme_imgbx {
     max-width: 26rem;

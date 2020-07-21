@@ -1,0 +1,105 @@
+[{
+  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
+    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
+    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
+    "https://picsum.photos/536/354"],
+  "brand_name": "Hewlett Packard",
+  "brand_product_name": "Nykaa Wanderlust Body Lotion - Sicilian Sweet Pea (300ml)",
+  "product_type": "Personal Care",
+  "stars": 3.5,
+  "reviewDate": "2020-July-18",
+  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "reviewBy": "Ruchi Style Corner",
+  "buyLinks": [{
+    "linkName": "Link1",
+    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
+    "promocode": "XYZ123",
+    "discount": "10%"
+  }],
+  "newLaunch": true,
+  "lovedByPeople": 500
+},
+{
+  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
+    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
+    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
+    "https://picsum.photos/536/354"],
+  "brand_name": "DELL",
+  "brand_product_name": "Nykaa Wanderlust Body Lotion - Sicilian Sweet Pea (300ml)",
+  "product_type": "Personal Care",
+  "stars": 3.5,
+  "reviewDate": "2020-July-18",
+  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "reviewBy": "Ruchi Style Corner",
+  "buyLinks": [{
+    "linkName": "Link1",
+    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
+    "promocode": "XYZ123",
+    "discount": "10%"
+  }],
+  "newLaunch": true,
+  "lovedByPeople": 500
+},
+{
+  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
+    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
+    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
+    "https://picsum.photos/536/354"],
+  "brand_name": "NAYKAA",
+  "brand_product_name": "Nykaa Wanderlust Body Lotion - Sicilian Sweet Pea (300ml)",
+  "product_type": "Personal Care",
+  "stars": 3.5,
+  "reviewDate": "2020-July-18",
+  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "reviewBy": "Ruchi Style Corner",
+  "buyLinks": [{
+    "linkName": "Link1",
+    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
+    "promocode": "XYZ123",
+    "discount": "10%"
+  }],
+  "newLaunch": false,
+  "lovedByPeople": 500
+},
+{
+  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
+    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
+    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
+    "https://picsum.photos/536/354"],
+  "brand_name": "MICROSOFT",
+  "brand_product_name": "Nykaa Wanderlust Body Lotion - Sicilian Sweet Pea (300ml)",
+  "product_type": "Personal Care",
+  "stars": 3.5,
+  "reviewDate": "2020-July-18",
+  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "reviewBy": "Ruchi Style Corner",
+  "buyLinks": [{
+    "linkName": "Link1",
+    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
+    "promocode": "XYZ123",
+    "discount": "10%"
+  }],
+  "newLaunch": false,
+  "lovedByPeople": 500
+},
+{
+  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
+    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
+    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
+    "https://picsum.photos/536/354"],
+  "brand_name": "NESCO",
+  "brand_product_name": "Nykaa Wanderlust Body Lotion - Sicilian Sweet Pea (300ml)",
+  "product_type": "Personal Care",
+  "stars": 3.5,
+  "reviewDate": "2020-July-18",
+  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "reviewBy": "Ruchi Style Corner",
+  "buyLinks": [{
+    "linkName": "Link1",
+    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
+    "promocode": "XYZ123",
+    "discount": "10%"
+  }],
+  "newLaunch": false,
+  "lovedByPeople": 500
+}]

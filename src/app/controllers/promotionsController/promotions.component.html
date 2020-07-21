@@ -1,34 +1,21 @@
-<div class="blogs_body">
-    <div class="blog_title_container">
-      <div class="stories-title">
-        <h1>Stories & Inspirations</h1>
-      </div>
-      <mat-form-field appearance="outline" color="white">
-        <mat-label>Search for Blog info</mat-label>
+<div class="promotions_body">
+  <div class="promo_title_container">
+    <h1>Products & Reviews</h1>
+    <div class="materialForm_inputdiv">
+      <mat-form-field floatLabel="auto" appearance="standard" >
+        <mat-label>Search for any Product</mat-label>
         <mat-icon matSuffix>search</mat-icon>
-        <input matInput placeholder="Title, Author" />
+        <input matInput/>
       </mat-form-field>
     </div>
-    <div class="blog_container" *ngFor="let recipient of blogsListMap | keyvalue : asIsOrder">
-      <div class="blog_genere_heading">
-        <h1>{{recipient.key}}</h1>
-      </div>
-      <div class="blog_genere">
-        <div class="blogs_post" *ngFor="let blog of recipient.value" (click)="navigateToBlog(blog)">
-          <div class="blogs_post_img">
-            <img src="{{ blog.blogThumbnail }}" />
-          </div>
-          <div class="blogs_post_info">
-            <h1 *ngIf="blog.isNewBlog">
-              <span></span>
-              New Post</h1>
-            <h2>{{ blog.blogTitle }}</h2>
-            <h3>{{ blog.blogAuthor }}</h3>
-            <h4>{{ blog.blogDateTime.toDate() | date:'dd MMM, yyyy h:mm' }}</h4>
-            <p class="blogs_text">{{ blog.blogText }}</p>
-            <a href="#" class="blogs_cta">Click to Read More ...</a>
-          </div>
-        </div>
-      </div>
+  </div>
+  <div class="promo_container">
+    <app-carousel [imageUrlList]="imagesList" [imageTimer]="5000" [isTextVisible]="false"></app-carousel>
+  </div>
+  <div class="all_promo_container" *ngIf="promoListLoaded | async">
+    <div
+      *ngFor="let promoObj of promotionsList">
+      <app-promopanel [promotionObject]="promoObj"></app-promopanel>
     </div>
   </div>
+</div>

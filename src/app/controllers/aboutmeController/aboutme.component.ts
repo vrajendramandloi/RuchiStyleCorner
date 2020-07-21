@@ -3,6 +3,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { DisplayDialogUtils } from '../../dialog/displayDialogUtils';
 import { HttpClient } from '@angular/common/http';
 import { CarouselComponentData } from '../carouselController/carousel.component';
+import { WhatsAppNotificationService } from 'src/app/service/WhatsAppNotification.service';
+import { WhatsAppReg } from 'src/app/modal/whatsAppReg';
+import { firestore } from 'firebase';
 
 @Component({
   selector: 'aboutme-control',
@@ -12,7 +15,8 @@ import { CarouselComponentData } from '../carouselController/carousel.component'
 export class AboutMeComponent {
   private _jsonURL = 'assets/customJsonData/brandsCollaborated.json';
   imagesList: CarouselComponentData[] = [];
-  constructor(private displayDialog: DisplayDialogUtils, private http: HttpClient) {
+  constructor(private displayDialog: DisplayDialogUtils, private http: HttpClient,
+    private registerService: WhatsAppNotificationService) {
     this.http.get(this._jsonURL).subscribe((data: CarouselComponentData[]) => {
       this.imagesList = data;
     });
@@ -47,8 +51,25 @@ export class AboutMeComponent {
   }
   registerForWhatsApp() {
     if (this.regWhatsAppFormGroup.valid) {
-      console.log("registering user {}", this.regWhatsAppFormGroup);
-      this.displayDialog.displayMessageDialog("user registered", "SUCCESS");
+      const confirmDialog = this.displayDialog.showConfirmDialog('Continue to Register?');
+      confirmDialog.afterClosed().subscribe(result => {
+        if (result) {
+          const mobileNumber = this.fc_userMobileNumberPrefix.value + '_' + this.fc_userMobileNumber.value;
+          const newReg: WhatsAppReg = {
+            fullName: this.fc_userFullName.value,
+            mobileNum: mobileNumber,
+            email: this.fc_userEmailId.value,
+            dateTime: firestore.Timestamp.fromDate(new Date()),
+            genereSelected: this.fc_userPrefGenere.value,
+            registered: 'NO'
+          };
+          this.registerService.createNewEntry(newReg).then(response => {
+            this.displayDialog.displayMessageDialog(mobileNumber + ' registered for notifications', 'SUCCESS');
+          }).catch(error => {
+            this.displayDialog.displayMessageDialog(mobileNumber + ' registration Failed', 'FAILURE');
+          });
+        }
+      });
     }
   }
 }

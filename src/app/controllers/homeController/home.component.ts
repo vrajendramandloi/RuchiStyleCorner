@@ -35,6 +35,45 @@ export class HomeComponent {
         'margin': 0.5,
         'lazy_load': true
       });
+      $(window).scroll(function() {
+        const windowBottom = $(this).scrollTop() + $(this).innerHeight();
+        $(".content-card").each(function() {
+          const objectBottom = $(this).offset().top + $(this).outerHeight();
+          /* If the element is completely within bounds of the window, fade it in */
+          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
+          } else { //object goes out of view (scrolling up)
+            if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
+          }
+        });
+        $(".comments-title").each(function() {
+          const objectBottom = $(this).offset().top + $(this).outerHeight();
+          /* If the element is completely within bounds of the window, fade it in */
+          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
+          } else { //object goes out of view (scrolling up)
+            if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
+          }
+        });
+        $(".comment-floater").each(function() {
+          const objectBottom = $(this).offset().top + $(this).outerHeight();
+          /* If the element is completely within bounds of the window, fade it in */
+          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
+          } else { //object goes out of view (scrolling up)
+            if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
+          }
+        });
+        $(".socialMedia-title").each(function() {
+          const objectBottom = $(this).offset().top + $(this).outerHeight();
+          /* If the element is completely within bounds of the window, fade it in */
+          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+            if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
+          } else { //object goes out of view (scrolling up)
+            if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
+          }
+        });
+      });
     });
   }
 

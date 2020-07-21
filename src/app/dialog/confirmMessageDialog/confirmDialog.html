@@ -1,0 +1,6 @@
+<h4 mat-dialog-title>Confirm</h4>
+<h4 mat-dialog-title>{{msgData.outputText}}</h4>
+<div mat-dialog-actions>
+  <button md-button class="btn btn-primary" style="margin: 1rem" (click)="dialogRef.close(true)">Confirm</button>
+  <button md-button class="btn btn-warning" style="margin: 1rem" (click)="dialogRef.close(false)">Cancel</button>
+</div>

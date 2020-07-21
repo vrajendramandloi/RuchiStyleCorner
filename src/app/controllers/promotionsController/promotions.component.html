@@ -5,12 +5,20 @@
       <mat-form-field floatLabel="auto" appearance="standard" >
         <mat-label>Search for any Product</mat-label>
         <mat-icon matSuffix>search</mat-icon>
-        <input matInput/>
+        <input matInput (keyup.enter)="searchFilter($event.target.value)"/>
       </mat-form-field>
+    </div>
+    <div class="allProductTypes" *ngIf="promoListLoaded | async">
+      <div *ngFor="let productTypes of productTypes">
+        <span>{{productTypes}}</span>
+      </div>
     </div>
   </div>
   <div class="promo_container">
     <app-carousel [imageUrlList]="imagesList" [imageTimer]="5000" [isTextVisible]="false"></app-carousel>
+  </div>
+  <div class="promo_genere_heading">
+    <h1>All Products</h1>
   </div>
   <div class="all_promo_container" *ngIf="promoListLoaded | async">
     <div

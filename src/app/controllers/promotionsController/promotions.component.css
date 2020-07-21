@@ -45,7 +45,23 @@
 .materialForm_inputdiv mat-form-field {
   min-width: 18rem;
 }
-
+.allProductTypes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem 0 0 0;
+}
+.allProductTypes span {
+  background-color: #fff;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  color: #000;
+  cursor: pointer;
+}
 .promo_container {
   width: 100%;
   overflow: hidden;
@@ -72,6 +88,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+}
+.promo_genere_heading {
+  margin-bottom: 2rem;
+  background-image: url('/assets/img/text-headers.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.promo_genere_heading h1{
+  padding: 4rem 2rem 0.5rem 2rem;
 }
 
 @media (min-width: 768px) and (orientation:portrait) {

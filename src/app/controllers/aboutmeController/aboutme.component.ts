@@ -1,26 +1,36 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { DisplayDialogUtils } from '../../dialog/displayDialogUtils';
 import { HttpClient } from '@angular/common/http';
-import { CarouselComponentData } from '../carouselController/carousel.component';
-import { WhatsAppNotificationService } from 'src/app/service/WhatsAppNotification.service';
-import { WhatsAppReg } from 'src/app/modal/whatsAppReg';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { firestore } from 'firebase';
+import { WhatsAppReg } from 'src/app/modal/whatsAppReg';
+import { WhatsAppNotificationService } from 'src/app/service/WhatsAppNotification.service';
+import { DisplayDialogUtils } from '../../dialog/displayDialogUtils';
+import { CarouselComponentData } from '../carouselController/carousel.component';
+declare var $: any;
 
 @Component({
   selector: 'aboutme-control',
   templateUrl: './aboutme.component.html',
   styleUrls: ['./aboutme.component.css']
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit{
   private _jsonURL = 'assets/customJsonData/brandsCollaborated.json';
   imagesList: CarouselComponentData[] = [];
   constructor(private displayDialog: DisplayDialogUtils, private http: HttpClient,
-    private registerService: WhatsAppNotificationService) {
+    private registerService: WhatsAppNotificationService, private route: ActivatedRoute) {
     this.http.get(this._jsonURL).subscribe((data: CarouselComponentData[]) => {
       this.imagesList = data;
     });
   }
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if(params['action'] === "whatsAppReg") {
+        $('html,body').animate({scrollTop: document.getElementById('aboutme_infoColl')}, '2000');
+      }
+    });
+  }
+
   regWhatsAppFormGroup = new FormGroup({
     fc_userFullName: new FormControl('', [Validators.required]),
     fc_userMobileNumberPrefix: new FormControl('+91', [

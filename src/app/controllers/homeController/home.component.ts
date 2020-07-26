@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { SocialMediaDetails, SubComp } from 'src/app/modal/subComp.js';
 import '../../../assets/js/InstagramFeed.min.js';
 import { fadeoutTrigger } from 'src/app/utils/app-animations.js';
+import { Router } from '@angular/router';
 declare var $: any;
 declare var InstagramFeed: any;
 
@@ -17,14 +18,14 @@ declare var InstagramFeed: any;
 export class HomeComponent {
   smdetails: SocialMediaDetails[] = [];
   loadingApp: boolean;
-  constructor() {
+  constructor(private router:Router) {
     this.loadingApp = true;
     setTimeout(() => {
       this.loadingApp = false;
     }, 1000);
 
     $(window).on('load', function() {
-      /* new InstagramFeed({
+      new InstagramFeed({
         'username': 'ruchistylecorner',
         'container': document.getElementById("instagram-header"),
         'display_profile': true,
@@ -44,25 +45,27 @@ export class HomeComponent {
         'items': 90,
         'margin': 0.5,
         'lazy_load': true
-      }); */
-      /* $(window).scroll(function() {
+      });
+      $(window).scroll(function() {
         const windowBottom = $(this).scrollTop() + $(this).innerHeight();
         $(".content-card").each(function() {
           const objectBottom = $(this).offset().top + $(this).outerHeight();
-          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+          if (objectBottom < windowBottom) {
             if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
-          } else { //object goes out of view (scrolling up)
+          } else {
             if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
           }
         });
-      }); */
+      });
     });
   }
 
   getItemsPerRow() {
     console.log('WIDTH is {}', $(window).width());
   }
-
+  navigateToRegister() {
+    this.router.navigate(['/aboutme'], { queryParams: { action: "whatsAppReg" }});
+  }
   navigateToUrl(url) {
     window.open(url);
   }

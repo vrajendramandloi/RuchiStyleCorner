@@ -68,6 +68,7 @@
   color: #fff;
   animation: fadeInUp;
   animation-duration: 2.5s;
+  cursor: pointer;
 }
 .home-banner-dailyupdates span{
   display: none;
@@ -239,7 +240,7 @@
   align-items: center;
   flex-direction: column;
   background-color:#FFE5E5;
-  background-image: url('/assets/img/homebackTexture.png');
+  background-image: url('https://drive.google.com/uc?id=1Th3_imXvhYWC7dCi5uecDU0uiF1rFHPu');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

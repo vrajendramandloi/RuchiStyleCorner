@@ -1,20 +1,23 @@
-.smCounter_title {
+.smCounterpanel {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
+.smCounter_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .smCounter_title {
   color: #fff;
 }
 .smCounter_title h3 {
-  font-size: 30px;
-  border-bottom-left-radius: 8rem;
-  border-bottom-right-radius: 8rem;
+  font-size: 20px;
+  border-radius: 5rem;
   background-color:#470FA8;
   color: #fff;
-  padding: 1rem 4rem;
+  padding: 0.7rem 3rem;
 }
 
 .smCountAmiContainer {
@@ -36,8 +39,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 1.5rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   background-color: #fff;
@@ -72,12 +75,15 @@
 
 
 @media (min-width: 768px) and (orientation:portrait) {
-}
-
-@media (min-width: 1224px) and (orientation:portrait) {
+  .smCountCard {
+    margin: 0.5rem 2rem;
+  }
   .smCountCard i{
     font-size: 45px;
   }
+}
+
+@media (min-width: 1224px) and (orientation:portrait) {
   .smCountCard h3 {
     padding-top: 1rem;
     font-size: 20px;
@@ -85,6 +91,12 @@
 }
 
 @media all and (orientation:landscape) {
+  .smCounterpanel {
+    flex-direction: row;
+  }
+  .smCounter_title {
+    margin-right: 2rem;
+  }
   .smCountCard {
     color: #fff;
     background-color:gold;
@@ -101,8 +113,21 @@
 
 @media (min-width: 768px) and (orientation:landscape) {
 }
-
+@media (min-width: 1024px) and (orientation:landscape) {
+  .smCountCard {
+    margin: 0.5rem 2rem;
+  }
+  .smCountCard i{
+    font-size: 45px;
+  }
+  .smCounterpanel {
+    flex-direction: column;
+  }
+}
 @media (min-width: 1224px) and (orientation:landscape) {
+  .smCounterpanel {
+    flex-direction: column;
+  }
   .smCountCard i{
     font-size: 45px;
   }

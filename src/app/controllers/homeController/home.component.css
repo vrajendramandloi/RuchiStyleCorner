@@ -3,7 +3,6 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
-
 .home-container {
   position: relative;
   overflow: hidden;
@@ -11,55 +10,81 @@
   display: flex;
   flex-direction: column;
 }
-
 .home-banner {
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 70vh;
+  max-height: 70vh;
   width: 100%;
   padding-top: 5rem;
   background-color:#470FA8;
-  background-image: url('/assets/img/homebackTexture.png');
+  background-image: url('https://drive.google.com/uc?id=1y6Jvm9jNvAer9yD5j-XxN63ACmdcxnFz');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: #fff;
 }
-
 .home-banner-text {
+  position: absolute;
   width: 100%;
-  height: 20%;
-  padding-left: 2rem;
+  z-index: 2;
+  top: 25%;
+  left: 5%;
 }
-
 .home-banner-text h3 {
   font-size: 15px;
 }
-
 .home-banner-text h2 {
   font-size: 20px;
   color: #DCA141;
 }
-
 .home-banner-text button {
   background-color: #DCA141;
 }
-
 .home-banner-image {
-  width: 100%;
-  height: 80%;
+  width: 21rem;
+  height: 19rem;
+  position: absolute;
   bottom: 0px;
   right: 0px;
   overflow: hidden;
 }
 
 .home-banner-image img {
-  width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
 }
 
+.home-banner-dailyupdates {
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  padding: 0.5rem 1.5rem 0 1.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: #45C455;
+  color: #fff;
+  animation: fadeInUp;
+  animation-duration: 2.5s;
+}
+.home-banner-dailyupdates span{
+  display: none;
+}
+.home-banner-dailyupdates h3{
+  display: none;
+}
+.home-banner-dailyupdates h4 {
+  font-size: 18px;
+}
+.home-social-media-back {
+  background-color: #fff;
+  margin: 1rem 0;
+  min-height: 30vh;
+  max-height: 30vh;
+  overflow: hidden;
+}
 .home-center-title {
   background-color:#470FA8;
   display: flex;
@@ -144,19 +169,13 @@
   visibility: visible;
   overflow: auto;
 }
-.home-social-media-back {
-  background-color: #470FA8;
-}
 .home-social-media {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  background: rgb(142, 100, 214);
-  padding-bottom: 3rem;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%;
+  background: #fff;
 }
 .home-social-media .sm-content {
   cursor: pointer;
@@ -370,9 +389,17 @@
 }
 
 @media (min-width: 768px) and (orientation:portrait) {
-  .home-banner-text {
-    padding-left: 4rem;
-    padding-top: 4rem;
+  .home-banner {
+    min-height: 80vh;
+    max-height: 80vh;
+  }
+  .home-social-media-back {
+    min-height: 20vh;
+    max-height: 20vh;
+  }
+  .home-banner-image {
+    width: 45rem;
+    height: 39rem;
   }
   .home-banner-text h3 {
     font-size: 20px;
@@ -389,10 +416,6 @@
 }
 
 @media (min-width: 1224px) and (orientation:portrait) {
-  .home-banner-text {
-    padding-left: 5rem;
-    padding-top: 5rem;
-  }
   .home-banner-text h3 {
     font-size: 25px;
   }
@@ -416,20 +439,12 @@
 }
 
 @media all and (orientation:landscape) {
-  .home-banner {
-    display: flex;
-    flex-direction: row;
-  }
-  .home-banner-text {
-    width: 50%;
-    height: 100%;
-    padding-left: 2rem;
+  .home-banner-text button {
+    display: none;
   }
   .home-banner-image {
-    width: 50%;
-    height: 100%;
-    bottom: 0px;
-    right: 0px;
+    height: calc(100% - 4rem);
+    width: calc(50%);
   }
   .home-footer .home-contact-types {
     flex-direction: row;
@@ -440,18 +455,44 @@
 }
 
 @media (min-width: 768px) and (orientation:landscape) {
-  .home-banner-text {
-    width: 40%;
-  }
-  .home-banner-image {
-    width: 60%;
+  .home-banner-text button {
+    display: none;
   }
   .home-instagram-panel .instagram-galleryContainer {
     width: 90%;
   }
 }
-
 @media (min-width: 1224px) and (orientation:landscape) {
+  .home-banner {
+    min-height: 78vh;
+    max-height: 78vh;
+  }
+  .home-social-media-back {
+    min-height: 22vh;
+    max-height: 22vh;
+  }
+  .home-banner-image {
+    width: 45rem;
+    height: 39rem;
+  }
+  .home-banner-dailyupdates {
+    left: 20%;
+  }
+  .home-banner-dailyupdates span{
+    display: block;
+    font-size: 18px;
+    background-color: #DCA141;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  .home-banner-dailyupdates h3{
+    display: block;
+    padding-top: 0.5rem;
+    font-size: 18px;
+  }
+  .home-banner-dailyupdates h4{
+    display: none;
+  }
   .home-banner-text {
     width: 30%;
     padding-left: 5rem;
@@ -466,9 +507,6 @@
   }
   .home-banner-text h1 {
     font-size: 35px;
-  }
-  .home-banner-image {
-    width: 70%;
   }
   .home-instagram-panel .instagram-galleryContainer {
     width: 80rem;

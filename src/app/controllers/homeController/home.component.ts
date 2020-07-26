@@ -2,19 +2,29 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { SocialMediaDetails, SubComp } from 'src/app/modal/subComp.js';
 import '../../../assets/js/InstagramFeed.min.js';
+import { fadeoutTrigger } from 'src/app/utils/app-animations.js';
 declare var $: any;
 declare var InstagramFeed: any;
 
 @Component({
   selector: 'home-component',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  animations: [
+    fadeoutTrigger
+  ]
 })
 export class HomeComponent {
   smdetails: SocialMediaDetails[] = [];
+  loadingApp: boolean;
   constructor() {
+    this.loadingApp = true;
+    setTimeout(() => {
+      this.loadingApp = false;
+    }, 1000);
+
     $(window).on('load', function() {
-      new InstagramFeed({
+      /* new InstagramFeed({
         'username': 'ruchistylecorner',
         'container': document.getElementById("instagram-header"),
         'display_profile': true,
@@ -34,46 +44,18 @@ export class HomeComponent {
         'items': 90,
         'margin': 0.5,
         'lazy_load': true
-      });
-      $(window).scroll(function() {
+      }); */
+      /* $(window).scroll(function() {
         const windowBottom = $(this).scrollTop() + $(this).innerHeight();
         $(".content-card").each(function() {
           const objectBottom = $(this).offset().top + $(this).outerHeight();
-          /* If the element is completely within bounds of the window, fade it in */
           if (objectBottom < windowBottom) { //object comes into view (scrolling down)
             if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
           } else { //object goes out of view (scrolling up)
             if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
           }
         });
-        $(".comments-title").each(function() {
-          const objectBottom = $(this).offset().top + $(this).outerHeight();
-          /* If the element is completely within bounds of the window, fade it in */
-          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-            if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
-          } else { //object goes out of view (scrolling up)
-            if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
-          }
-        });
-        $(".comment-floater").each(function() {
-          const objectBottom = $(this).offset().top + $(this).outerHeight();
-          /* If the element is completely within bounds of the window, fade it in */
-          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-            if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
-          } else { //object goes out of view (scrolling up)
-            if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
-          }
-        });
-        $(".socialMedia-title").each(function() {
-          const objectBottom = $(this).offset().top + $(this).outerHeight();
-          /* If the element is completely within bounds of the window, fade it in */
-          if (objectBottom < windowBottom) { //object comes into view (scrolling down)
-            if ($(this).css("opacity")==0) {$(this).fadeTo(500, 1); }
-          } else { //object goes out of view (scrolling up)
-            if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
-          }
-        });
-      });
+      }); */
     });
   }
 

@@ -8,16 +8,11 @@ import * as $ from 'jquery';
 })
 export class NavbarComponent implements OnInit {
   ngOnInit() {
-    $(document).ready(function(){
-      $('.navbar-toggle a').click(function() {
-        $('.navbar-menu').toggleClass('active');
-      });
-      $('.navbar-menu ul li a').click(function() {
-        $('.navbar-menu').toggleClass('active');
-      });
-      $('.navbar-menu .navbar-close a').click(function() {
-        $('.navbar-menu').toggleClass('active');
-      });
+    $('.toggleMenu').click( function() {
+      $('ul').toggleClass('active');
+    });
+    $('ul li a').click(function() {
+      $('ul').toggleClass('active');
     });
   }
 }

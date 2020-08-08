@@ -2,10 +2,20 @@
   <div class="promo_panel_image_carousel">
     <h1 *ngIf="promotionObject.newLaunch">
         <span></span>
-        New Product</h1>
-    <app-carousel [imageUrlList]="promoPanelImageList" [imageTimer]="5000"
-    [showArrow]="false" [showDots]="true"
-    [isTextVisible]="false"></app-carousel>
+        New Product
+    </h1>
+    <div [flickity]="{
+      wrapAround: true,
+      pageDots: true,
+      prevNextButtons: false,
+      autoPlay: 5000}" >
+      <div *ngFor="let item of imageUrlList">
+        <div class="promo_carousel_post">
+          <img src="{{ item.imageUrl }}" />
+        </div>
+      </div>
+    </div>
+    <!-- <app-carousel [imageUrlList]="imageUrlList" [imageTimer]="5000" [isTextVisible]="false"></app-carousel> -->
   </div>
   <div class="promo_panel_details">
     <h1>{{promotionObject.brand_product_name}}</h1>

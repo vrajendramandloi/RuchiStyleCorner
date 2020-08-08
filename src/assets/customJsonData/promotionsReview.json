@@ -1,105 +1,21 @@
 [{
-  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
-    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
-    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
-    "https://picsum.photos/536/354"],
-  "brand_name": "Hewlett Packard",
-  "brand_product_name": "HP Sales is on Fire Sp Pavellion",
-  "product_type": "Tech",
+  "promo_images": ["https://drive.google.com/uc?id=1sqE9_ooFM03R_x5h3L1FdbD-WlZ_akhu",
+    "https://drive.google.com/uc?id=1L70Q70dunzrjTHVibAQcj0X5tORDfwPb",
+    "https://drive.google.com/uc?id=1SqbgfClhqled61L3UD67MhWATKDuxdFm"],
+  "brand_name": "OZIVA",
+  "brand_product_name": "Oziva Peanut Butter | Crunchy Flavor",
+  "product_type": "Health",
   "stars": 3.5,
   "reviewDate": "2020-July-18",
-  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "reviewNote": "OZiva Superfood Peanut Butter is India’s First Peanut Butter which comes with added Superfoods like Honey, Moringa and Pomegranate. 100% Natural and contains Non GMO Peanuts along with Antioxidant and Energy Blend. Provides 15 essential Vitamins & Minerals - Calcium, Iron, Zinc, Vitamin A, Vitamin D, Vitamin C, Vitamin E and B-complex Vitamins. Contains No Additives, No added Salt and Sugar for Preservation or Stabilization. Soy Free, Gluten Free, Zero Trans Fat, Zero Cholesterol, Non GMO, No Artificial Sweetener, No added Preservatives. Free Diet Consultation for Customers.",
   "reviewBy": "Ruchi Style Corner",
   "buyLinks": [{
     "linkName": "Link1",
-    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
-    "promocode": "XYZ123",
-    "discount": "10%"
-  }],
-  "newLaunch": true,
-  "lovedByPeople": 500
-},
-{
-  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
-    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
-    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
-    "https://picsum.photos/536/354"],
-  "brand_name": "DELL",
-  "brand_product_name": "Dell Laptops",
-  "product_type": "Tech",
-  "stars": 3.5,
-  "reviewDate": "2020-July-18",
-  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  "reviewBy": "Ruchi Style Corner",
-  "buyLinks": [{
-    "linkName": "Link1",
-    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
-    "promocode": "XYZ123",
-    "discount": "10%"
-  }],
-  "newLaunch": true,
-  "lovedByPeople": 500
-},
-{
-  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
-    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
-    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
-    "https://picsum.photos/536/354"],
-  "brand_name": "NAYKAA",
-  "brand_product_name": "Nykaa Wanderlust Body Lotion - Sicilian Sweet Pea (300ml)",
-  "product_type": "Personal Care",
-  "stars": 3.5,
-  "reviewDate": "2020-July-18",
-  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  "reviewBy": "Ruchi Style Corner",
-  "buyLinks": [{
-    "linkName": "Link1",
-    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
-    "promocode": "XYZ123",
-    "discount": "10%"
-  }],
-  "newLaunch": false,
-  "lovedByPeople": 500
-},
-{
-  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
-    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
-    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
-    "https://picsum.photos/536/354"],
-  "brand_name": "MICROSOFT",
-  "brand_product_name": "Windows",
-  "product_type": "Tech",
-  "stars": 3.5,
-  "reviewDate": "2020-July-18",
-  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  "reviewBy": "Ruchi Style Corner",
-  "buyLinks": [{
-    "linkName": "Link1",
-    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
-    "promocode": "XYZ123",
-    "discount": "10%"
-  }],
-  "newLaunch": false,
-  "lovedByPeople": 500
-},
-{
-  "promo_images": ["https://drive.google.com/uc?id=1fGgan7kbyIQ9VLGurZwMPN8lnCJracH6",
-    "https://drive.google.com/uc?id=1te2S_hhPuZxZB9oNEOptjAwAv6F5pyAX",
-    "https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ",
-    "https://picsum.photos/536/354"],
-  "brand_name": "NESCO",
-  "brand_product_name": "Nykaa Wanderlust Body Lotion - Sicilian Sweet Pea (300ml)",
-  "product_type": "Personal Care",
-  "stars": 3.5,
-  "reviewDate": "2020-July-18",
-  "reviewNote": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  "reviewBy": "Ruchi Style Corner",
-  "buyLinks": [{
-    "linkName": "Link1",
-    "link": "https://www.nykaa.com/nykaa-wanderlust-shower-gel/p/488649?ptype=product&productId=488649&skuId=488648&pps=1",
+    "link": "https://www.oziva.in/products/superfood-peanut-butter-with-roasted-peanuts-moringa-pomegranate-brahmi-more-850g-crunchy?variant=21398457745467",
     "promocode": "XYZ123",
     "discount": "10%"
   }],
   "newLaunch": false,
   "lovedByPeople": 500
 }]
+

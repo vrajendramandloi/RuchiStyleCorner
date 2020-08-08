@@ -46,7 +46,7 @@ export class HomeComponent {
         'margin': 0.5,
         'lazy_load': true
       });
-      $(window).scroll(function() {
+      /* $(window).scroll(function() {
         const windowBottom = $(this).scrollTop() + $(this).innerHeight();
         $(".content-card").each(function() {
           const objectBottom = $(this).offset().top + $(this).outerHeight();
@@ -56,7 +56,7 @@ export class HomeComponent {
             if ($(this).css("opacity")==1) {$(this).fadeTo(500, 0); }
           }
         });
-      });
+      }); */
     });
   }
 

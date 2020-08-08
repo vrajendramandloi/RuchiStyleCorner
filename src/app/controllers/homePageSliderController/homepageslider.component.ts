@@ -11,7 +11,7 @@ declare var $: any;
 })
 export class HomePageSliderComponent implements OnInit {
   currentSlide = 0;
-  private _jsonURL = 'assets/customJsonData/customData.json';
+  private _jsonURL = 'assets/customJsonData/viewrsCompliments.json';
   subCompList: SubComp[] = [];
   constructor(private http: HttpClient) {
     this.http.get(this._jsonURL).subscribe((data: SubComp[]) => {

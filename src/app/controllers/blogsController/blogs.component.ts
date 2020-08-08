@@ -29,6 +29,6 @@ export class BlogsComponent implements OnInit {
   navigateToBlog(blog: Blogs) {
     const encd = new EncryptDecrypt();
     const encryptedMsg2 = encd.encrypterRc4(JSON.stringify(blog), 'VrajendraMandloi');
-    this.router.navigate(['/story',  encryptedMsg2 ], { relativeTo: this.activatedRoute.parent });
+    this.router.navigate(['/blogs',  encryptedMsg2 ], { relativeTo: this.activatedRoute.parent });
   }
 }

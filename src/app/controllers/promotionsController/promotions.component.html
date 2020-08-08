@@ -1,16 +1,18 @@
 <div class="promotions_body">
-  <div class="promo_title_container">
-    <h1>Products & Reviews</h1>
-    <div class="materialForm_inputdiv">
-      <mat-form-field floatLabel="auto" appearance="standard" >
-        <mat-label>Search for any Product</mat-label>
-        <mat-icon matSuffix>search</mat-icon>
-        <input matInput (keyup.enter)="searchFilter($event.target.value)"/>
-      </mat-form-field>
-    </div>
-    <div class="allProductTypes" *ngIf="promoListLoaded | async">
-      <div *ngFor="let productTypes of productTypes">
-        <span>{{productTypes}}</span>
+  <div class="promo-title_container_banner">
+    <div class="promo_title_container">
+      <h1>Products & Reviews</h1>
+      <div class="materialForm_inputdiv">
+        <mat-form-field appearance="outline" color="white">
+          <mat-label>Search for any Product</mat-label>
+          <mat-icon matSuffix>search</mat-icon>
+          <input matInput placeholder="Title, Author" (keyup.enter)="searchFilter($event.target.value)" />
+        </mat-form-field>
+      </div>
+      <div class="allProductTypes" *ngIf="promoListLoaded | async">
+        <div *ngFor="let productTypes of productTypes">
+          <h2 (click)="selectedCategory(productTypes)">{{productTypes}}</h2>
+        </div>
       </div>
     </div>
   </div>

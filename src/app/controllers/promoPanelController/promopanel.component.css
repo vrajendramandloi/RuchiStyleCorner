@@ -26,10 +26,17 @@
   display: block;
   border-radius: 0.2rem;
 }
-
+.promo_carousel_post {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 1rem;
+}
 .promo_panel_details {
   min-width: 20rem;
-  background: #002060;
+  background: #232A37;
   color: #fff;
   position: relative;
   padding: 1rem;

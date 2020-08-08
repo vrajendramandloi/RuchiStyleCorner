@@ -9,20 +9,23 @@ import { CarouselComponentData } from '../carouselController/carousel.component'
 })
 export class PromoPanelComponent implements OnInit {
   @Input() promotionObject: PromoPanelReviewModal;
-  promoPanelImageList: CarouselComponentData[] = [];
+  imageUrlList: CarouselComponentData[] = [];
   ispromoLoaded: Promise<boolean>;
   promotionsList: PromoPanelReviewModal[] = [];
 
-  constructor() {}
+  constructor() { }
   ngOnInit() {
-    this.promoPanelImageList = [];
-    for (let i=0; i < this.promotionObject.promo_images.length; i++) {
-      const carouselImg: CarouselComponentData = {
-        imageUrl: this.promotionObject.promo_images[i]
-      };
-      this.promoPanelImageList.push(carouselImg);
+    for (let imageUrl of this.promotionObject.promo_images) {
+      if(imageUrl != null && imageUrl.trim().length != 0) {
+        const carouselImg: CarouselComponentData = {
+          imageUrl: imageUrl,
+          imageText: "test"
+        };
+        this.imageUrlList.push(carouselImg);
+      }
     }
     this.ispromoLoaded = Promise.resolve(true);
+    console.log('Promo Panel Called');
   }
 }
 

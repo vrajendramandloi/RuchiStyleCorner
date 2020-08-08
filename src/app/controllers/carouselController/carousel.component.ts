@@ -15,6 +15,7 @@ export class CarouselComponent implements OnInit {
   @Input() isTextVisible: boolean;
   @Input() showArrow: boolean = true;
   @Input() showDots: boolean = true;
+  isImagesListLoaded: boolean = false;
   constructor() { }
   ngOnInit() { }
 }

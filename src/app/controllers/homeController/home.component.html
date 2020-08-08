@@ -3,70 +3,63 @@
 </div>
 <div class="home-body">
   <div class="home-container">
-    <div class="home-banner">
-      <div class="home-banner-text">
-        <h3>Welcome, all</h3>
-        <h2>I am Ruchi,</h2>
-        <h3>I am a Content Creator on Youtube, <br> I create Home Decor, DIY and lifestyle Vlogs.</h3>
-        <button class="btn btn-info" (click)="scrollToBottom()">Contact Me</button>
+    <div class="home-banner_container">
+      <div class="home-banner">
+        <div class="home-banner-text">
+          <h3>Welcome, all</h3>
+          <h2>I am Ruchi,</h2>
+          <h4>I am a Content Creator on Youtube, <br> I create Home Decor, DIY and lifestyle Vlogs.</h4>
+          <button class="btn btn-info" (click)="scrollToBottom()">Contact Me</button>
+        </div>
+        <div class="home-banner-image">
+          <img src="https://drive.google.com/uc?id=1u0aA7yDr-oOQR22oMdeawS5YDAPrfac3">
+        </div>
       </div>
-      <div class="home-banner-image">
-        <img src="https://drive.google.com/uc?id=1f5WGugrmGe8jok2cpeNiA8VRkiXkCdED">
+      <div class="home-social-media-back" *ngIf="!loadingApp">
+        <app-smAniCounter></app-smAniCounter>
       </div>
-      <div class="home-banner-dailyupdates" *ngIf="!loadingApp" (click)="navigateToRegister()">
-        <span>For Daily Updates</span>
-        <h3><i class="fa fa-whatsapp" aria-hidden="true"></i> Register Now..</h3>
-        <h4><i class="fa fa-whatsapp" aria-hidden="true"></i> Register Now for daily Updates</h4>
-      </div>
-    </div>
-    <div class="home-social-media-back" *ngIf="!loadingApp">
-      <app-smAniCounter></app-smAniCounter>
-    </div>
-    <div class="home-center-title">
-      <h1>Genere</h1>
     </div>
     <div class="home-content-card">
       <div class="content-card">
         <div class="img-box">
-          <img src="https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ">
+          <img src="https://drive.google.com/uc?id=1jKbK0Nja__qU2gpY36BhhqxVimmpAcVt">
         </div>
         <div class="content-header">
           <h2>DIY's</h2>
         </div>
-        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of PageMaker including versions of Lorem Ipsum.</span>
+        <span>DIY (Do It Yourself) are created by you. No matter who you are, we all have secret skills to share. Come join our community of curious makers, innovators, teachers, and life long learners who love to share what they make. I make it easy to learn how to make anything, one step at a time. From the Ganpati Pandal to the water fountain, you are sure to be inspired by the awesome projects that we have shared.</span>
       </div>
       <div class="content-card">
         <div class="img-box">
-          <img src="https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ">
+          <img src="https://drive.google.com/uc?id=1oHudB3Js2xat8gG8_luo46tY3fhznq-k">
         </div>
         <div class="content-header">
-          <h2>Home-Decor</h2>
+          <h2>Home-Styling</h2>
         </div>
-        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of PageMaker including versions of Lorem Ipsum.</span>
+        <span>Everyone loves freshening things up-until you "checkout" and see just how much our small bedroom redesign is actually going to cost, that is. But you don't have to drain your bank account (or forgo your new decor plans altogether) to make it all happen, you just have to know where to find the best deals. Often, you can find similar items, styles and more budget-friendly makeovers here.</span>
       </div>
       <div class="content-card">
         <div class="img-box">
-          <img src="https://drive.google.com/uc?id=1L15t673MwZeg2Vd1ltVcTLQoEaKnBuOQ">
+          <img src="https://drive.google.com/uc?id=1Rya7hidql1gXDKsgGVFIh5-nbcdysZIn">
         </div>
         <div class="content-header">
           <h2>Life-Style</h2>
         </div>
-        <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of PageMaker including versions of Lorem Ipsum.</span>
+        <span>Lifestyle to cover everything for everyone, but as women, femme and non-binary people, we’re multi-layered with unique needs and interests—and we deserve media that recognizes our interests. I am committed to shifting the paradigm of what it means to be seen, and they’re disrupting stereotypes that have been accepted for far too long.</span>
       </div>
     </div>
+    <div class="home-center-title">
+      <h1>Viewers Complements</h1>
+    </div>
     <div class="home-best-comments">
-      <div class="comments-title">
-        <h1>Viewers Complements</h1>
-      </div>
       <div class="comment-floater">
         <app-homepageslider-control></app-homepageslider-control>
       </div>
     </div>
+    <div class="socialMedia-title">
+      <h1>Instagram</h1>
+    </div>
     <div class="home-instagram-panel">
-        <div class="socialMedia-title">
-          <h1>Instagram</h1>
-        </div>
-        <br>
         <div id="instagram-header"></div>
         <div class="instagram-galleryContainer">
           <div id="instagram-feed1"></div>
@@ -75,25 +68,12 @@
     <div class="home-footer">
       <div class="home-contact-info">
         <h1>Contact Info</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of PageMaker including versions of Lorem Ipsum.</p>
+        <p>Thank you for your interest in connecting with us. If you are a brand/ seller and like to collaborate or share any feedback on our video logs/ Product reviews, please drop a note on below email ID. You can also subscribe to our daily updates via whatsApp. We will share daily lifestyle videos. Our main objective as a lifestyle vlogger is to influence people for a good and healthy life.</p>
       </div>
-      <div class="home-contact-types">
-        <div class="sm-content">
-          <div class="sm-content-icon">
-            <a><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-          </div>
-          <div class="sm-content-details">
-            <h4>+91 9999999990</h4>
-          </div>
-        </div>
-        <div class="sm-content">
-          <div class="sm-content-icon">
-            <a><i class="fa fa-envelope-open-o" aria-hidden="true"></i></a>
-          </div>
-          <div class="sm-content-details">
-            <h4>dummy@abc.com</h4>
-          </div>
-        </div>
+      <div class="verticalBar"></div>
+      <div class="home-contactTypes">
+        <h4><a (click)="navigateToRegister()"><i class="fa fa-whatsapp" aria-hidden="true"></i> Register Now for daily Updates</a></h4>
+        <h2><i class="fa fa-envelope-open-o" aria-hidden="true"></i> ruchicmandloi@gmail.com</h2>
       </div>
     </div>
   </div>

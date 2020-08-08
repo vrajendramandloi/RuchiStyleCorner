@@ -7,10 +7,13 @@
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   /* Eternal Constance blue - Green */
-  background: rgb(22,148,182);
-  background: linear-gradient(180deg, rgba(22,148,182,1) 0%, rgba(46,79,132,1) 100%);
+  /* background: rgb(22,148,182);
+  background: linear-gradient(180deg, rgba(22,148,182,1) 0%, rgba(46,79,132,1) 100%); */
+  /* background-color: #F2F3F6; */
+  background: rgb(255,145,181);
+  background: linear-gradient(180deg, rgba(255,145,181,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 90%);
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   padding: 6rem 0;
   position: relative;
 }
@@ -99,6 +102,7 @@
   height: 4rem;
   display: flex;
   flex-wrap: wrap;
+  cursor: pointer;
   margin: 0.3rem;
   justify-content: center;
   align-items: center;
@@ -168,6 +172,7 @@
 }
 .contact-options .option h4 {
   font-size: 24px;
+  word-break: break-all;
 }
 
 .aboutme_infoColl {
@@ -200,7 +205,7 @@
   border-radius: 5rem;
   padding: 1rem 2rem;
   color: #fff;
-  background: #1877f2;
+  background: #222B3D;
 }
 
 .whatsapp-reg {
@@ -234,7 +239,7 @@
 .aboutme_brandCollab {
   position: relative;
   overflow: hidden;
-  padding: 2rem 4rem;
+  padding: 1rem 1rem;
   cursor: grab;
 }
 .aboutme_brandCollab /deep/ img {

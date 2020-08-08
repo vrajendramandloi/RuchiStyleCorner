@@ -31,15 +31,17 @@ export class PromotionsComponent implements OnInit {
   }
   extractAllProductTypes() {
     this.productTypes.push('All');
+    this.productTypes.push('Hair Care');
     this.productTypes.push('Skin Care');
     this.productTypes.push('Fashion');
     this.productTypes.push('Life Style');
     this.productTypes.push('Kitchen');
-    this.productTypes.push('Tech');
     this.productTypes.push('Health');
     this.productTypes.push('New Products');
   }
-
+  selectedCategory(text: string) {
+    this.searchFilter(text);
+  }
   searchFilter(text: string) {
     if (text === null || text.trim().length === 0) {
       this.promotionsList = this.allPromotionsList;

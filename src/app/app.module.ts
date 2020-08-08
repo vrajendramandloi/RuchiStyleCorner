@@ -85,8 +85,8 @@ export const firebaseConfig = {
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'vlogs', component: VlogsComponent },
-      { path: 'stories', component: BlogsComponent },
-      { path: 'story/:storyDetails', component: BlogPageComponent },
+      { path: 'blogs', component: BlogsComponent },
+      { path: 'blogs/:storyDetails', component: BlogPageComponent },
       { path: 'aboutme', component: AboutMeComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'promotions', component: PromotionsComponent },

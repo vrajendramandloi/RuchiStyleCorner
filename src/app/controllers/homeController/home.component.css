@@ -10,20 +10,30 @@
   display: flex;
   flex-direction: column;
 }
+.home-banner_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: rgb(255,145,181);
+  background: linear-gradient(142deg, rgba(255,145,181,1) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,0) 90%);
+  /* background: rgb(255,215,0);
+  background: linear-gradient(142deg, rgba(255,215,0,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 90%); */
+}
 .home-banner {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-height: 70vh;
-  max-height: 70vh;
   width: 100%;
+  height: 100%;
   padding-top: 5rem;
-  background-color:#470FA8;
+  /* background-color:#F2F3F6; */
   background-image: url('https://drive.google.com/uc?id=1y6Jvm9jNvAer9yD5j-XxN63ACmdcxnFz');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #000;
 }
 .home-banner-text {
   position: absolute;
@@ -34,13 +44,20 @@
 }
 .home-banner-text h3 {
   font-size: 15px;
+  font-weight: bold;
 }
 .home-banner-text h2 {
-  font-size: 20px;
-  color: #DCA141;
+  font-size: 25px;
+  font-family: 'Charmonman', cursive;
+  font-weight: bold;
+  color: #FF5353;
+}
+.home-banner-text h4 {
+  font-size: 15px;
+  color: #918a8a;
 }
 .home-banner-text button {
-  background-color: #DCA141;
+  background-color: #0C4481;
 }
 .home-banner-image {
   width: 21rem;
@@ -79,74 +96,81 @@
 .home-banner-dailyupdates h4 {
   font-size: 18px;
 }
-.home-social-media-back {
-  background-color: #fff;
-  margin: 1rem 0;
-  min-height: 30vh;
-  max-height: 30vh;
+.home-banner_container .home-social-media-back {
+  position: relative;
+  align-self: flex-end;
+  left:0;
+  bottom:0;
+  width: 100%;
+  background-color: #F2F3F6;
+  background-image: url('https://drive.google.com/uc?id=14ryiRJVaWox0VbbI3db7ucN59SkmR4B-');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.7;
+  padding: 1rem 0;
   overflow: hidden;
 }
 .home-center-title {
-  background-color:#470FA8;
+  background-color: #232A37;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
+  padding: 1rem 0;
+  background-image: url('https://drive.google.com/uc?id=14ryiRJVaWox0VbbI3db7ucN59SkmR4B-');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.7;
 }
 .home-center-title h1 {
-  color: #470FA8;
-  padding: 1rem 4rem;
-  font-size: 40px;
+  color: #232A37;
+  padding: 1rem 3rem;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
   background-color: #fff;
   border-radius: 5rem;
 }
-
 .home-content-card {
   display: flex;
   width: 100%;
+  background-color: #F2F3F6;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1rem 0 4rem 0;
+  padding: 2rem 0;
 }
-
-.home-content-card .home-center-title hr {
-  color: #DCA141;
-  border: 2px;
-}
-
 .home-content-card .content-card {
   animation: jackInTheBox;
   animation-duration: 1.5s;
   position: relative;
   max-width: 20rem;
-  max-height: 18rem;
+  max-height: 25rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   border-radius: 0.3rem;
+  background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
-  margin: 3rem 1rem 0 1rem;
+  margin: 2.5rem 1rem 0 1rem;
 }
-
-.home-content-card .content-card:hover {
-  max-height: 25rem;
-}
-
 .home-content-card .content-card .img-box {
   max-width: 16rem;
   min-width: 16rem;
   height: 16rem;
-  transform: translateY(-2rem);
+  transform: translateY(-1rem);
   transition: .5s;
+  border-radius: .4rem;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.4);
 }
 
 .home-content-card .content-card .img-box img {
   width: 100%;
   height: 100%;
+  opacity: 0.8;
   object-fit: cover;
   display: block;
   border-radius: .4rem;
@@ -157,110 +181,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-1rem);
   color: #DCA141;
   font-weight: bold;
 }
 .home-content-card .content-card span {
-  visibility: hidden;
-  overflow: hidden;
-  margin: 1rem 1rem;
-}
-.home-content-card .content-card:hover span {
   visibility: visible;
   overflow: auto;
+  text-align: justify;
+  margin: 0 1rem 1rem;
 }
-.home-social-media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  background: #fff;
-}
-.home-social-media .sm-content {
-  cursor: pointer;
-  margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  color: #fff;
-}
-.sm-content .sm-content-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-}
-.sm-content .sm-content-details {
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  font-size: 10px;
-}
-
-.home-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #1F1F40;
-  color: white;
-  width: 100%;
-  padding: 4rem 1rem;
-}
-.home-footer home-contact-info {
-  width: 90%;
-}
-.home-footer .home-contact-types {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.home-footer .home-contact-types .sm-content {
-  margin: 1rem;
-  display: flex;
-  flex-direction: row;
-  color: #fff;
-}
-
-.home-footer .home-contact-types .sm-content .sm-content-icon {
-  font-size: 30px;
-}
-
-.home-footer .home-contact-types .sm-content .sm-content-details h4 {
-  font-size: 20px;
-}
-
 .home-best-comments {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color:#FFE5E5;
+  background-color:#F2F3F6;
   background-image: url('https://drive.google.com/uc?id=1Th3_imXvhYWC7dCi5uecDU0uiF1rFHPu');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.home-best-comments .comments-title {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 2rem;
-  border-radius: 5rem;
-  background-color: #470FA8;
-  padding: 1rem 2rem;
-  color: #fff;
-  max-width: 20rem;
-  text-align: center;
-}
-.home-best-comments .comments-title h1{
-  font-size: 30px;
-}
 .home-best-comments .comment-floater {
   width: 100%;
   position: relative;
@@ -269,24 +211,27 @@
   margin: 2rem 1rem;
   border-radius: 2rem;
 }
-
-.home-best-stories {
+.socialMedia-title {
+  background-color: #FAD5E6;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
+  padding: 1rem 0;
+  background-image: url('https://drive.google.com/uc?id=1sjXrkISpbhtkbGxLgw-A2Kev_pBqTAdC');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.7;
 }
-.home-best-stories .stories-title {
-  background-color: #8E64D6;
-  padding: 2rem 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+.socialMedia-title h1 {
+  color: #000;
+  padding: 1rem 3rem;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5rem;
 }
-
 .home-instagram-panel {
   display: flex;
   justify-content: center;
@@ -304,7 +249,6 @@
   align-items: center;
   color: #fff;
 }
-
 .home-instagram-panel .instagram-galleryContainer {
   width: 18rem;
   display: flex;
@@ -314,7 +258,6 @@
   flex-wrap: wrap;
   padding-bottom: 4rem;
 }
-
 .home-instagram-panel .instagram-galleryContainer /deep/ .instagram_gallery {
   width: 100%;
   display: flex;
@@ -340,55 +283,49 @@
   opacity: 1;
 }
 
-.home-best-stories .stories-container {
+.home-footer {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 4rem 1rem;
-}
-
-.home-best-stories .stories-container .stories-card {
-  position: relative;
-  max-width: 20rem;
-  max-height: 30rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   flex-direction: column;
-  border-radius: 0.3rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in-out;
-  margin: 2rem;
+  background-color: #1F1F40;
+  color: white;
+  width: 100%;
+}
+.home-footer .home-contact-info {
+  padding: 4rem 1rem 1rem;
+  font-size: 20px;
+}
+.home-footer .home-contactTypes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.stories-card .img-box {
-  max-width: 16rem;
-  min-width: 16rem;
-  height: 16rem;
-  transition: .5s;
+.home-footer .verticalBar {
+  display: none;
+  border-left: 2px solid #F2F3F6;
+  height: 10rem;
+  opacity: 0.5;
+  margin-top: 0.8rem;
+}
+
+.home-footer h4 {
+  background-color: #45C455;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 20px;
+  border-radius: 0.4rem;
   margin: 1rem;
 }
-
-.stories-card .img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: .4rem;
-  transition: .5s;
-}
-.stories-card .stories-header {
-  width: 100%;
-  padding: 2rem;
-  color: rgb(95, 95, 100);
-}
-
-.stories-card .stories-header h2 {
+.home-footer h2 {
+  background-color: #fff;
   color: #1F1F40;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 20px;
 }
-
 @media (min-width: 768px) and (orientation:portrait) {
   .home-banner {
     min-height: 80vh;
@@ -408,8 +345,8 @@
   .home-banner-text h2 {
     font-size: 30px;
   }
-  .home-banner-text h1 {
-    font-size: 30px;
+  .home-banner-text h4 {
+    font-size: 20px;
   }
   .home-instagram-panel .instagram-galleryContainer {
     width: 90%;
@@ -423,7 +360,7 @@
   .home-banner-text h2 {
     font-size: 35px;
   }
-  .home-banner-text h1 {
+  .home-banner-text h4 {
     font-size: 35px;
   }
   .home-footer home-contact-info {
@@ -457,10 +394,16 @@
 
 @media (min-width: 768px) and (orientation:landscape) {
   .home-banner-text button {
-    display: none;
+    display: block;
   }
   .home-instagram-panel .instagram-galleryContainer {
     width: 90%;
+  }
+}
+@media (min-width: 1024px) and (orientation:landscape) {
+  .home-banner-image {
+    width: 35rem;
+    height: 31rem;
   }
 }
 @media (min-width: 1224px) and (orientation:landscape) {
@@ -473,8 +416,8 @@
     max-height: 22vh;
   }
   .home-banner-image {
-    width: 45rem;
-    height: 39rem;
+    width: auto;
+    height: calc(100% - 6rem);
   }
   .home-banner-dailyupdates {
     left: 20%;
@@ -501,13 +444,13 @@
     white-space: nowrap;
   }
   .home-banner-text h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .home-banner-text h2 {
-    font-size: 35px;
+    font-size: 40px;
   }
-  .home-banner-text h1 {
-    font-size: 35px;
+  .home-banner-text h4 {
+    font-size: 25px;
   }
   .home-instagram-panel .instagram-galleryContainer {
     width: 80rem;
@@ -516,5 +459,19 @@
     max-width: 23rem;
     min-width: 23rem;
     height: 23rem;
+  }
+  .home-footer {
+    flex-direction: row;
+  }
+  .home-footer .home-contact-info {
+    width: 40rem;
+    padding: 4rem 1rem 1rem;
+    font-size: 20px;
+  }
+  .home-footer .verticalBar {
+    display: block;
+  }
+  .home-footer .home-contactTypes {
+    flex-direction: column
   }
 }

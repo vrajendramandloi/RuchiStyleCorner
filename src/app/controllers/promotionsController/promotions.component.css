@@ -9,25 +9,31 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+.promo-title_container_banner {
+  /* background: rgb(255,145,181);
+  background: linear-gradient(180deg, rgba(255,145,181,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 90%); */
+  background: rgb(255,145,181);
+  background: linear-gradient(142deg, rgba(255,145,181,1) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,0) 90%);
+  width: 100%;
+  height: auto;
+}
 .promo_title_container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  color: #fff;
+  color: #000;
   position: relative;
   width: 100%;
-  padding-top: 6rem;
-  padding-bottom: 2rem;
-  background-image: url('https://drive.google.com/uc?id=1Elj4HKGuvbTGmMJMdOg9JjaI_TxsKAcE');
+  padding: 6rem 1rem 2rem;
+  background-image: url('https://drive.google.com/uc?id=1y6Jvm9jNvAer9yD5j-XxN63ACmdcxnFz');
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: left;
-  background-repeat:repeat-x;
+  background-position: center;
 }
 
 .promo_title_container h1 {
-  background-color: #002060;
-  color: #fff;
+  color: #222B3D;
   font-size: 25px;
   justify-content: center;
   align-items: center;
@@ -35,32 +41,37 @@
   position: relative;
   border-radius: 0.5rem;
 }
-.materialForm_inputdiv {
-  position: relative;
-  background-color: #fff;
-  padding: 0 1rem;
-  border-radius: 1rem;
-  color: #000;
-}
 .materialForm_inputdiv mat-form-field {
-  min-width: 18rem;
+  width: 20rem;
 }
+
 .allProductTypes {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin: 2rem 0 0 0;
+  overflow: auto;
+  flex-wrap: nowrap;
+  width: 100%;
+  position: relative;
 }
-.allProductTypes span {
-  background-color: #fff;
+.allProductTypes h2 {
+  background-color: #f2f2f2;
   border-radius: 3rem;
   padding: 0.5rem 1rem;
-  margin: 0 1rem;
-  color: #000;
+  white-space: nowrap;
+  margin: 1rem;
+  color: #222B3D;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: center;
+  text-overflow: unset;
   cursor: pointer;
+  transition: 0.5s;
+}
+.allProductTypes h2:hover {
+  background-color: #222B3D;
+  color: #fff;
 }
 .promo_container {
   width: 100%;
@@ -91,7 +102,7 @@
 }
 .promo_genere_heading {
   margin-bottom: 2rem;
-  background-image: url('/assets/img/text-headers.png');
+  background-image: url('https://drive.google.com/uc?id=1EoqJwXlBPJKUwDTMtEc7awBSvG9Yavh8');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

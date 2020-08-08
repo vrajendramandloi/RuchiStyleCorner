@@ -30,6 +30,9 @@ export class AboutMeComponent implements OnInit{
       }
     });
   }
+  redirectUrl(pageurl) {
+    window.open(pageurl);
+  }
 
   regWhatsAppFormGroup = new FormGroup({
     fc_userFullName: new FormControl('', [Validators.required]),

@@ -15,7 +15,7 @@
 .smCounter_title h3 {
   font-size: 20px;
   border-radius: 5rem;
-  background-color:#470FA8;
+  text-decoration: underline;
   color: #fff;
   padding: 0.7rem 3rem;
 }
@@ -47,6 +47,7 @@
   border-radius: 0.5rem;
   color: #999;
   transition: 0.5s ease-in;
+  cursor: pointer;
 }
 .smCountCard i{
   font-size: 35px;
@@ -98,8 +99,8 @@
     margin-right: 2rem;
   }
   .smCountCard {
-    color: #fff;
-    background-color:gold;
+    /* color: #F2F3F6; */
+    background-color:#fff;
   }
   .smCountCard i{
     font-size: 35px;

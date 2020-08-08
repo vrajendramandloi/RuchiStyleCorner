@@ -5,8 +5,8 @@ header {
   max-height: 4rem;
   /* box-sizing: content-box; */
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  background: rgba(242, 243, 246, 0.2);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
   transition: 0.5s;
 }
 header .navbar-logo {
@@ -29,7 +29,7 @@ header .toggleMenu {
   float: right;
   padding: 0.5rem;
   font-size: 25px;
-  color: #fff;
+  color: #232A37;
 }
 header ul {
   position: relative;
@@ -50,13 +50,14 @@ header ul li a {
   text-align: center;
   color: #fff;
   text-decoration: none;
+  font-weight: bold;
   text-transform: uppercase;
   background: rgba(0,0,0,0.8);
   transition: 0.5s;
 }
 header ul li a:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #B8C2C4;
+  color: #fff;
   margin: 0 0.5rem;
   border-radius: 0.5rem;
 }
@@ -91,7 +92,7 @@ header ul li a:hover {
     justify-content: flex-end;
   }
   header ul li .verticalBar {
-    border-left: 2px solid #fff;
+    border-left: 2px solid #232A37;
     height: 2rem;
     margin-top: 0.8rem;
   }
@@ -101,6 +102,7 @@ header ul li a:hover {
   }
   header ul li a {
     padding: 1rem 2rem;
+    color: #232A37;
     background: rgba(0,0,0,0);
   }
 }
@@ -123,7 +125,7 @@ header ul li a:hover {
     padding-left: 4rem;
   }
   .navbar-logo img {
-    max-height: 4rem;
+    max-height: 6rem;
     object-fit: cover;
   }
   header .toggleMenu {
@@ -137,7 +139,7 @@ header ul li a:hover {
     justify-content: flex-end;
   }
   header ul li .verticalBar {
-    border-left: 2px solid #fff;
+    border-left: 2px solid #232A37;
     height: 2rem;
     margin-top: 0.8rem;
   }
@@ -147,6 +149,7 @@ header ul li a:hover {
   }
   header ul li a {
     padding: 1rem;
+    color: #232A37;
     background: rgba(0,0,0,0);
   }
 }

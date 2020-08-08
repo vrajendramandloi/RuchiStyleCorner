@@ -12,12 +12,12 @@ import { DisplayDialogUtils } from 'src/app/dialog/displayDialogUtils';
 export class PromotionsComponent implements OnInit {
   loadingApp = true;
   imagesList: CarouselComponentData[] = [];
-  productTypes: string[] = [];
+  productTypes: string[] = ['All', 'Hair Care', 'Skin Care', 'Fashion', 'Life Style', 'Kitchen', 'Health', 'New Products'];
   allPromotionsList: PromoPanelReviewModal[] = [];
   promotionsList: PromoPanelReviewModal[] = [];
   promoListLoaded: Promise<boolean>;
   constructor(private promotionsService: PromotionService, private displayDialog: DisplayDialogUtils) {
-    this.extractAllProductTypes();
+    //this.extractAllProductTypes();
   }
   ngOnInit() {
     this.promotionsService.getAllPromoBanners().then(data => {
@@ -29,7 +29,7 @@ export class PromotionsComponent implements OnInit {
       this.promoListLoaded = Promise.resolve(true);
     });
   }
-  extractAllProductTypes() {
+  /* extractAllProductTypes() {
     this.productTypes.push('All');
     this.productTypes.push('Hair Care');
     this.productTypes.push('Skin Care');
@@ -38,8 +38,14 @@ export class PromotionsComponent implements OnInit {
     this.productTypes.push('Kitchen');
     this.productTypes.push('Health');
     this.productTypes.push('New Products');
-  }
+  } */
   selectedCategory(text: string) {
+    if (text === null || text.trim().length === 0 || text.toUpperCase() === 'ALL') {
+      this.promotionsList = this.allPromotionsList;
+      document.getElementById('productGenerHeading').innerHTML = 'All Products';
+      return;
+    }
+    document.getElementById('productGenerHeading').innerHTML = text;
     this.searchFilter(text);
   }
   searchFilter(text: string) {
@@ -51,6 +57,7 @@ export class PromotionsComponent implements OnInit {
     if (this.promotionsList.length === 0) {
       this.promotionsList = this.allPromotionsList;
       this.displayDialog.displayMessageDialog('Filter Text not Available', 'Not Found.!');
+      document.getElementById('productGenerHeading').innerHTML = 'All Products';
     }
   }
 

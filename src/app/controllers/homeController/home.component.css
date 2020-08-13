@@ -16,8 +16,9 @@
   width: 100%;
   height: 100vh;
   position: relative;
-  background: rgb(255,145,181);
-  background: linear-gradient(142deg, rgba(255,145,181,1) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,0) 90%);
+  background-color: #fff;
+  /* background: rgb(255,145,181);
+  background: linear-gradient(142deg, rgba(255,145,181,1) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,0) 90%); */
   /* background: rgb(255,215,0);
   background: linear-gradient(142deg, rgba(255,215,0,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 90%); */
 }
@@ -170,7 +171,7 @@
 .home-content-card .content-card .img-box img {
   width: 100%;
   height: 100%;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   object-fit: cover;
   display: block;
   border-radius: .4rem;
@@ -181,13 +182,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #DCA141;
+  color: #000;
   font-weight: bold;
+}
+.home-content-card .content-card .content-header h2{
+  font-size: 30px;
+  font-family: 'Charmonman', cursive;
+  font-weight: bolder;
 }
 .home-content-card .content-card span {
   visibility: visible;
   overflow: auto;
   text-align: justify;
+  color: #918a8a;
   margin: 0 1rem 1rem;
 }
 .home-best-comments {
@@ -268,15 +275,13 @@
 }
 
 .home-instagram-panel .instagram-galleryContainer /deep/ img {
-  max-width: 16rem;
-  min-width: 16rem;
-  height: 16rem;
-  margin: 1rem;
+  width: 6rem;
+  height: 6rem;
+  margin: 2px;
   object-fit: cover;
-  display: block;
   border-radius: 0.2rem;
   transition: 0.5s;
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 .home-instagram-panel .instagram-galleryContainer /deep/ img:hover {
   transform: translateY(-0.5rem);

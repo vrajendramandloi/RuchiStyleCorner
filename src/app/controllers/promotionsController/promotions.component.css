@@ -44,18 +44,24 @@
 .materialForm_inputdiv mat-form-field {
   width: 20rem;
 }
-
 .allProductTypes {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  overflow: auto;
-  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
+  margin: 1rem;
   position: relative;
 }
-.allProductTypes h2 {
+.allProductTypes ul{
+  list-style-type: none;
+  white-space: nowrap;
+  position: relative;
+}
+.allProductTypes li {
+  position: relative;
+  display:inline-block;
   background-color: #f2f2f2;
   border-radius: 3rem;
   padding: 0.5rem 1rem;
@@ -69,7 +75,7 @@
   cursor: pointer;
   transition: 0.5s;
 }
-.allProductTypes h2:hover {
+.allProductTypes li:hover {
   background-color: #222B3D;
   color: #fff;
 }

@@ -15,7 +15,7 @@ header .navbar-logo {
   text-align: center;
 }
 .navbar-logo img {
-  max-height: 3rem;
+  max-height: 4rem;
   object-fit: cover;
 }
 header .toggleMenu {
@@ -125,7 +125,7 @@ header ul li a:hover {
     padding-left: 4rem;
   }
   .navbar-logo img {
-    max-height: 6rem;
+    max-height: 7rem;
     object-fit: cover;
   }
   header .toggleMenu {
